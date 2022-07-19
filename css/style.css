@@ -8,16 +8,17 @@
 }
 
 body{
-   position: relative;
+   /* position: relative; */
    font-family: 'Noto Sans KR', sans-serif;
-   background: burlywood;
 }
+
+/* -------------header-nav 부분----------------- */
 
 header{
    position: relative;
    top: 0px;
    left: 0px;
-   width: 1920px;
+   width: 100%;
    height: 80px;
    /* background: #FFFFFF 0% 0% no-repeat padding-box; */
    border: 1px solid #DBDBDB;
@@ -99,7 +100,7 @@ header{
 .hide-nave{
    top: 24px;
    left: 0px;
-   width: 1920px;
+   width: 100%;
    height: 263px;
 }
 
@@ -107,7 +108,7 @@ header{
    position: absolute;
    top: 79px;
    left: 0px;
-   width: 1920px;
+   width: 100%;
    height: 207px;
    background: #184B9F 0% 0% no-repeat padding-box;
    border: 1px solid #707070;
@@ -150,15 +151,115 @@ header{
 .hide-nav-texts{
    display: none;
 }
-
+/* ------------header-케러셀 부분------------- */
 .container{
    position: absolute;
    top: 0px;
    left: 0px;
+   width: 100%;
 }
 .pic-1{
-   width: 1920px;
-   background: url('/img/carousel.png') no-repeat;
+   /* max-width: 100%; */
+   background: url('/img/carousel-max.png') no-repeat;
+   background-size: cover;
    height: 900px;
+   overflow: hidden;
 
 }
+
+/* ---------프로젝트 부분----------------------- */
+
+.project-wrap{
+   position: absolute;
+   top: 1550px;
+   left: 0px;
+   background: #F9F8FF;
+   width: 100%;
+   height: 1147px;
+   z-index: 80;
+}
+
+.project-con-wrap{
+   max-width: 1440px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-around;
+}
+
+/* ------------프로젝트 글 부분------------- */
+.pro-con-left{
+   padding-top: 100px;
+}
+
+.project-text{
+   text-align: right;
+}
+
+.project-text h2{
+   font-weight: bold;
+   font-size: 40px;
+   color: #1E1E1E;
+}
+
+.project-text .pro-text-eng{
+   color: #C8C8C8;
+   padding-bottom: 50px;
+   font-weight: Medium;
+   font-size: 18px;
+}
+
+.project-text .pro-text-con{
+   color: #1E1E1E;
+   font-weight: bold;
+   font-size: 26px;
+}
+
+.motion-pic-1{
+   margin-top: 61px;
+}
+
+/* ---------------프로젝트 사진 두개 부분------------------ */
+.pro-con-right{
+   margin-top: 211px;
+}
+
+
+.ecoce-back-img{
+   border-radius: 10px;
+   width: 475px;
+   height: 355px;
+   background: transparent url('/img/ecoce-3d-pic.png') 0% 0% no-repeat padding-box ;
+   background-position: center;
+}
+
+
+.pro-ecoce-wrap{
+   position: relative;
+   width: 475px;
+   height: 355px;
+}
+
+.pro-ecoce-wrap figcaption{
+   position: absolute;
+   color: #FFFFFF;
+   font-size: 17px;
+   z-index: 2;
+   padding: 270px 0 0 21px;
+   top:0; right:0; bottom:0; left:0; 
+   opacity: 0;
+   background-color:rgba(0,0,0,0.5); 
+   display:block; 
+   z-index: 1;
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+}
+
+
+.pro-ecoce-wrap figcaption:hover{
+   opacity: 1;
+}
+
+
+
+
