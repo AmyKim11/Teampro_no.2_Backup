@@ -313,3 +313,174 @@ header{
       display: flex;
       justify-content: space-around;
 }
+
+/* -----------서비스 내용 부분(왼쪽)---------------- */
+.ser-con-left{
+   padding-top: 100px;
+}
+
+.service-text h2{
+   color: #1E1E1E;
+   font-size: 40px;
+}
+
+.service-text .ser-text-eng{
+   color: #C8C8C8;
+   font-weight: medium;
+   font-size: 18px;
+}
+
+.service-text .ser-text-con{
+   padding-top: 50px;
+   font-weight: bold;
+   font-size: 26px;
+   color: #1E1E1E;
+}
+/* -----------서비스 내용 부분(오른쪽)---------------- */
+.ser-con-right{
+   position: relative;
+   padding-top: 100px;
+   margin-right: 360px;
+}
+
+.ser-develop-wrap{
+   position: relative;
+   /* overflow: hidden; */
+   border-radius: 30px;
+   width: 300px;
+   height: 375px;
+}
+
+.app-develop-img h4,
+.web-back-img h4,
+.app-ai-img h4,
+.app-xr-img h4{
+   font-size: 30px;
+   font-weight: 400;
+}
+
+.app-develop-img p,
+.web-back-im p,
+.app-ai-img p,
+.app-xr-img p{
+   font-size: 20px;
+}
+
+.app-develop-img{
+   width: 300px;
+   height: 375px;
+   text-align: center;
+   color: #FFFFFF;
+   padding-top: 160px;
+   border-radius: 30px;
+   background: rgba(0, 0, 0, 0.3) url('/img/app-dev.png') no-repeat center;
+   background-blend-mode: darken;
+}
+
+
+
+.ser-develop-wrap:hover .imghover,
+.ser-web-wrap:hover .imghover,
+.ser-ai-wrap:hover .imghover,
+.ser-xr-wrap:hover .imghover{
+   transform: scale(1.1);
+   color: transparent;
+}
+
+
+.ser-develop-wrap figcaption,
+.ser-web-wrap figcaption,
+.ser-ai-wrap figcaption,
+.ser-xr-wrap figcaption{
+   position: absolute;
+   color: #FFFFFF;
+   font-size: 24px;
+   z-index: 2;
+   text-align: center;
+   padding: 200px 0 0 80px;
+   top:0; right:0; bottom:0; left:0; 
+   opacity: 0;
+   display:block; 
+   z-index: 1;
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+   transition-duration: 0.3s;
+}
+
+.ser-develop-wrap figcaption:hover,
+.ser-web-wrap figcaption:hover,
+.ser-ai-wrap figcaption:hover,
+.ser-xr-wrap figcaption:hover{
+   text-align: center;
+   padding: 150px 0 0 0;
+   transform: scale(1.1);
+   border-radius: 10px;
+   cursor: pointer;
+   opacity: 1;
+   transition-duration: 0.3s;
+}
+
+.ser-web{
+   position: absolute;
+   top: 218px;
+   left: 380px;
+}
+
+.ser-web-wrap{
+   position: relative;
+   /* overflow: hidden; */
+   border-radius: 30px;
+   width: 300px;
+   height: 375px;
+}
+
+.web-back-img,
+.app-ai-img,
+.app-xr-img{
+   width: 300px;
+   height: 375px;
+   text-align: center;
+   color: #FFFFFF;
+   padding-top: 160px;
+   border-radius: 30px;
+   background: rgba(0, 0, 0, 0.3) url('/img/web-build.png') no-repeat center;
+   background-blend-mode: darken;
+}
+
+.ser-ai{
+      position: absolute;
+      top: 555px;
+      left: 0px;
+   }
+
+
+.ser-ai-wrap{
+   position: relative;
+   /* overflow: hidden; */
+   border-radius: 30px;
+   width: 300px;
+   height: 375px;
+}
+
+.app-ai-img{
+   background: rgba(0, 0, 0, 0.3) url('/img/ai-pic.png') no-repeat center;
+}
+
+.ser-xr{
+   position: absolute;
+   top: 673px;
+   left: 380px;
+}
+
+.ser-xr-wrap{
+   position: relative;
+   /* overflow: hidden; */
+   border-radius: 30px;
+   width: 300px;
+   height: 375px;
+}
+
+.app-xr-img{
+   background: rgba(0, 0, 0, 0.3) url('/img/XRcon.png') no-repeat center;
+}
