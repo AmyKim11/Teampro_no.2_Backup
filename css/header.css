@@ -8,28 +8,36 @@
 }
 
 body{
-   position: relative;
    font-family: 'Noto Sans KR', sans-serif;
-   background: burlywood;
 }
 
 header{
    position: relative;
+   text-align: center;
    top: 0px;
    left: 0px;
-   width: 1920px;
+   width: 100%;
    height: 80px;
    background: #FFFFFF 0% 0% no-repeat padding-box;
+   border-left: none;
+   border-right: none;
    border: 1px solid #DBDBDB;
    opacity: 1;
    z-index: 90;
    
 }
 
+.header-con-wrap{
+   display: inline-block;
+   position: relative;
+   max-width: 1280px;
+   width: 100%;
+}
+
 .ci-logo{
-   position: absolute;
-   top: 25px;
-   left: 360px;
+   width: fit-content;
+   /* position: absolute; */
+   padding: 25px 0 0 0;
 }
 
 .ci-logo img{
@@ -37,10 +45,25 @@ header{
    height: 30px;
    /* filter:invert(100%) sepia(100%) saturate(2%) hue-rotate(190deg) brightness(102%) contrast(101%); */
 }
+
+.header-con-wrap nav{
+   margin-top: -35px;
+   padding-right: 140px;
+   float: right;
+   width: fit-content;
+   margin-right: 0;
+}
+
+.nav-text{
+   display: flex;
+   justify-content: space-between;
+   width: 400px;
+}
 .nav-text a{
    display: block;
 }
 .nav-text li{
+   display: block;
    letter-spacing: 0px;
    color: #000000;
    opacity: 1;
@@ -78,59 +101,44 @@ header{
 
 
 .nav-text a:first-of-type li{
-   position: absolute;
+   /* position: absolute;
    top: 26px;
-   left: 1198px;
+   left: 1198px; */
    color: #184B9F; /*<- 두번째, 세번째, 네번째 서브 해당되는 사람은 주석처리 해야 함*/
 }
 
 .nav-text .underline{
-   display:block;
+   margin-top: 3px;
    width: 74px;
    height: 6px;
    background: #184B9F; 
    border-radius: 3px; 
 }
 
-.under-1{
-   /* visibility: hidden;  */
-   position: absolute;
-   top: 59px;
-   left: 1198px;
+/*.under-1{
+    visibility: hidden;  
+}*/
+.nav-text .under-2{
+   display: none; /*<-두번째 서브 페이지는 주석처리 하고, 나머지 1이랑3은 살림*/
 }
-.under-2{
-   visibility: hidden; /*<-두번째 서브 페이지는 주석처리 하고, 나머지 1이랑3은 살림*/
-   position: absolute;
-   top: 59px;
-   left: 1332px;
-}
-.under-3{
-   visibility: hidden;/*<-세번째,네번째(마지막) 서브 페이지는 주석처리 함 위의
+.nav-text .under-3{
+   display: none;/*<-세번째,네번째(마지막) 서브 페이지는 주석처리 함 위의
    under-1,2는 살려야 함*/
-   position: absolute;
-   top: 59px;
-   left: 1466px;
 }
 
 
 
-.nav-text a:nth-of-type(2) li{
-   position: absolute;
-   top: 26px;
-   left: 1332px;
-    /* color: #184B9F; */ /*<- 첫번째 세번째 네번째 서브 담당자는 주석처리해야함*/
-}
-.nav-text a:last-of-type li{
-   position: absolute;
-   top: 26px;
-   left: 1466px;
-    /* color: #184B9F; */ /*<-첫번째, 두번째 서브 담당자는 주석처리 해야함*/
-}
+/*.nav-text a:nth-of-type(2) li{
+    /* color: #184B9F;} */ /*<- 첫번째 세번째 네번째 서브 담당자는 주석처리해야함*/
+
+/*.nav-text a:last-of-type li{
+    /* color: #184B9F;} */ /*<-첫번째, 두번째 서브 담당자는 주석처리 해야함*/
+
 
 .hamburger-menu{
    position: absolute;
-   top: 24px;
-   left: 1648px;
+   top: 25px;
+   right: 0;
    width: 32px;
    height: 32px;
    cursor: pointer;
@@ -139,9 +147,9 @@ header{
 }
 
 .hide-nave{
-   top: 24px;
-   left: 0px;
-   width: 1920px;
+   /* top: 24px;
+   left: 0px; */
+   width: 100%;
    height: 263px;
 }
 
@@ -149,13 +157,29 @@ header{
    position: absolute;
    top: 79px;
    left: 0px;
-   width: 1920px;
+   width: 100%;
    height: 207px;
    background: #184B9F 0% 0% no-repeat padding-box;
    border: 1px solid #707070;
    border-top: none;
    opacity: 0.9;
    color: #FFFFFF;
+}
+
+.hide-nav-con-wrap{
+   position: relative;
+   max-width: 1280px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.hide-nav-flex-wrap{
+   position: absolute;
+   display: flex;
+   justify-content: space-between;
+   width: 400px;
+   top: 12px;
+   right: 140px;
 }
 
 .hide-nav-texts a li{
@@ -165,30 +189,6 @@ header{
    opacity: 1;
    cursor: pointer;
 }
-.slide-nav-text-1{
-   position: absolute;
-   top: 10px;
-   left: 1196px;
-   width: 99px;
-   height: 145px;
-}
-
-.slide-nav-text-2{
-   position: absolute;
-   top: 10px;
-   left: 1331px;
-   width: 69px;
-   height: 87px;
-}
-
-.slide-nav-text-3{
-   position: absolute;
-   top: 10px;
-   left: 1468px;
-   width: 99px;
-   height: 29px;
-}
-
 .hide-nav-texts{
    display: none;
 }
