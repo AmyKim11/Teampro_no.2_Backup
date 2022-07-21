@@ -33,14 +33,14 @@ header{
 .header-con-wrap{
    display: inline-block;
    position: relative;
-   max-width: 1280px;
+   max-width: 1440px;
    width: 100%;
 }
 
 .ci-logo{
    width: fit-content;
    /* position: absolute; */
-   padding: 25px 0 0 0;
+   padding: 25px 0 0 120px;
 }
 
 .ci-logo img{
@@ -102,7 +102,7 @@ header{
    width: 32px;
    height: 32px;
    cursor: pointer;
-   background: transparent url('../img/hamburger_menu.svg') 0% 0% no-repeat padding-box;
+   background: transparent url('../img/nav/hamburger_menu.svg') 0% 0% no-repeat padding-box;
    opacity: 1;
 }
 
@@ -128,7 +128,7 @@ header{
 
 .hide-nav-con-wrap{
    position: relative;
-   max-width: 1280px;
+   max-width: 1440px;
    width: 100%;
    margin: 0 auto;
 }
@@ -153,21 +153,7 @@ header{
 .hide-nav-texts{
    display: none;
 }
-/* ------------header-케러셀 부분------------- */
-.container{
-   position: absolute;
-   top: 0px;
-   left: 0px;
-   width: 100%;
-}
-.pic-1{
-   /* max-width: 100%; */
-   background: url('../img/carousel-max.png') no-repeat;
-   background-size: cover;
-   height: 900px;
-   overflow: hidden;
 
-}
 
 /* ---------프로젝트 부분----------------------- */
 
@@ -230,7 +216,7 @@ header{
    border-radius: 10px;
    width: 475px;
    height: 355px;
-   background: transparent url('../img/ecoce-3d-pic.png') 0% 0% no-repeat padding-box ;
+   background: transparent url('../img/project/ecoce-3d-pic.png') 0% 0% no-repeat padding-box ;
    background-position: center;
    
 }
@@ -245,6 +231,7 @@ header{
 }
 .pro-ecoce-wrap{
    overflow: hidden;
+   border-radius: 10px;
    position: relative;
    width: 475px;
    height: 355px;
@@ -280,7 +267,7 @@ header{
    border-radius: 10px;
    width: 475px;
    height: 355px;
-   background: transparent url('../img/moaDo-pic.png') 0% 0% no-repeat padding-box;
+   background: transparent url('../img/project/moaDo-pic.png') 0% 0% no-repeat padding-box;
 }
 
 
@@ -292,7 +279,7 @@ header{
    margin-top: 50px;
    width: 475px;
    height: 355px;
-   background: url('../img/gradient-moado.svg') no-repeat center;
+   background: url('../img/project/gradient-moado.svg') no-repeat center;
 }
 
 .pro-moado-wrap figcaption{
@@ -375,7 +362,7 @@ header{
    color: #FFFFFF;
    padding-top: 160px;
    border-radius: 30px;
-   background: rgba(0, 0, 0, 0.3) url('../img/app-dev.png') no-repeat center;
+   background: rgba(0, 0, 0, 0.3) url('../img/service/app-dev.png') no-repeat center;
    background-blend-mode: darken;
 }
 
@@ -446,7 +433,7 @@ header{
    color: #FFFFFF;
    padding-top: 160px;
    border-radius: 30px;
-   background: rgba(0, 0, 0, 0.3) url('../img/web-build.png') no-repeat center;
+   background: rgba(0, 0, 0, 0.3) url('../img/service/app-dev.png') no-repeat center;
    background-blend-mode: darken;
 }
 
@@ -466,7 +453,7 @@ header{
 }
 
 .app-ai-img{
-   background: rgba(0, 0, 0, 0.3) url('../img/ai-pic.png') no-repeat center;
+   background: rgba(0, 0, 0, 0.3) url('../img/service/ai-pic.png') no-repeat center;
 }
 
 .ser-xr{
@@ -484,5 +471,5 @@ header{
 }
 
 .app-xr-img{
-   background: rgba(0, 0, 0, 0.3) url('../img/XRcon.png') no-repeat center;
+   background: rgba(0, 0, 0, 0.3) url('../img/service/XRcon.png') no-repeat center;
 }

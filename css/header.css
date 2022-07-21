@@ -30,14 +30,14 @@ header{
 .header-con-wrap{
    display: inline-block;
    position: relative;
-   max-width: 1280px;
+   max-width: 1440px;
    width: 100%;
 }
 
 .ci-logo{
    width: fit-content;
    /* position: absolute; */
-   padding: 25px 0 0 0;
+   padding: 25px 0 0 120px;
 }
 
 .ci-logo img{
@@ -142,7 +142,7 @@ header{
    width: 32px;
    height: 32px;
    cursor: pointer;
-   background: transparent url('/img/hamburger_menu_black.svg') 0% 0% no-repeat padding-box;
+   background: transparent url('/img/nav/hamburger_menu_black.svg') 0% 0% no-repeat padding-box;
    opacity: 1;
 }
 
@@ -168,7 +168,7 @@ header{
 
 .hide-nav-con-wrap{
    position: relative;
-   max-width: 1280px;
+   max-width: 1440px;
    width: 100%;
    margin: 0 auto;
 }
