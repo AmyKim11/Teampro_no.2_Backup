@@ -8,7 +8,7 @@
 }
 
 body{
-   /* position: relative; */
+   position: relative;
    font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -51,7 +51,7 @@ header{
 
 .header-con-wrap nav{
    margin-top: -35px;
-   padding-right: 140px;
+   padding-right: 160px;
    float: right;
    width: fit-content;
    margin-right: 0;
@@ -94,11 +94,10 @@ header{
 }
 
 
-
 .hamburger-menu{
    position: absolute;
    top: 25px;
-   right: 0;
+   right: 20px;
    width: 32px;
    height: 32px;
    cursor: pointer;
@@ -139,7 +138,7 @@ header{
    justify-content: space-between;
    width: 400px;
    top: 12px;
-   right: 140px;
+   right: 160px;
 }
 
 .hide-nav-texts a li{
@@ -153,7 +152,21 @@ header{
 .hide-nav-texts{
    display: none;
 }
+/* -------------------nav 용 임시 사진------------------------- */
+.container{
+   width: 100%;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+}
+.pic-1{
+   /* max-width: 1920px; */
+   width: 100%;
+   background: url('../img/nav/carousel.png') no-repeat;
+   background-size: cover;
+   height: 900px;
 
+}
 
 /* ---------프로젝트 부분----------------------- */
 
@@ -472,4 +485,91 @@ header{
 
 .app-xr-img{
    background: rgba(0, 0, 0, 0.3) url('../img/service/XRcon.png') no-repeat center;
+}
+
+/* ----------------footer 부분----------------- */
+
+footer{
+   position: absolute;
+   top: 4879px;
+   left: 0;
+   width: 100%;
+   height: 250px;
+   background: #E9E9E9 0% 0% no-repeat padding-box;
+
+}
+
+.footer-con-wrap{
+   max-width: 1440px;
+   width: 100%;
+   margin: 50px auto;
+   padding: 0 3% 0 3%;
+}
+
+.footer-ci{
+   display: flex;
+   justify-content: space-between;
+   max-width: 510px;
+}
+
+.footer-ci .footer-copyright{
+   padding-top: 21px;
+   margin-bottom: 0px;
+   color: #9E9E9E;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.footer-text-wrap{
+   width: 100%;
+   display: flex;
+   margin-top: 30px;
+   color: #9E9E9E;
+   font-weight: 300;
+   font-size: 16px;
+   word-wrap: keep-all;
+}
+
+.footer-left-con p,
+.footer-right-con p{
+   margin-bottom: 0;
+}
+
+.footer-left-con{
+   height: 76px;
+   margin-right: 10%;
+}
+.footer-right-con{
+   height: 50px;
+   word-wrap: keep-all;
+}
+
+/* 반응형 - 해상도 (768px~1024이하일때) */
+
+@media (min-width:768px) and (max-width:1024px) {
+   /* nav 부분 */
+   .header-con-wrap{
+      max-width: 1024px;
+   }
+
+
+}
+
+/* 반응형 - 해상도 768px 이하 */
+@media  (max-width:767px) {
+   footer{
+      height: 331px;
+   }
+
+   .footer-con-wrap{
+      padding: 0 5%;
+   }
+
+   .footer-text-wrap{
+      flex-direction: column;
+   }
+
+   .footer-left-con{
+      margin-bottom: 30px;
+   }
 }
