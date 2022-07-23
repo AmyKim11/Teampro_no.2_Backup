@@ -241,13 +241,14 @@ header{
 
 /* ---------------프로젝트 사진 두개 부분------------------ */
 .pro-con-right{
+   width: 70%;
    margin-top: 211px;
 }
 
 
 .ecoce-back-img{
    border-radius: 10px;
-   width: 475px;
+   width: 100%;
    height: 355px;
    background: transparent url('../img/project/ecoce-3d-pic.png') 0% 0% no-repeat padding-box ;
    background-position: center;
@@ -266,7 +267,8 @@ header{
    overflow: hidden;
    border-radius: 10px;
    position: relative;
-   width: 475px;
+   width: 100%;
+   max-width: 475px;
    height: 355px;
 }
 
@@ -298,7 +300,8 @@ header{
 
 .moado-back-img{
    border-radius: 10px;
-   width: 475px;
+   width: 100%;
+   max-width: 475px;
    height: 355px;
    background: transparent url('../img/project/moaDo-pic.png') 0% 0% no-repeat padding-box;
 }
@@ -310,7 +313,8 @@ header{
    position: relative;
    border-radius: 10px;
    margin-top: 50px;
-   width: 475px;
+   width: 100%;
+   max-width: 475px;
    height: 355px;
    background: url('../img/project/gradient-moado.svg') no-repeat center;
 }
@@ -564,6 +568,18 @@ footer{
    word-wrap: keep-all;
 }
 
+/* ------------1025이상일때---------------
+@media screen and (max-width:1024px) {
+   .ecoce-back-img,
+   .moado-back-img{
+      width: 475px;
+   }
+   .pro-ecoce-wrap,
+   .pro-moado-wrap{
+      max-width: 475px;
+   }
+} */
+
 /* 반응형 - 해상도 (768px~1024이하일때) */
 
 @media (max-width:941px) and (max-width:1024px) {
@@ -572,10 +588,39 @@ footer{
       max-width: 1024px;
    }
 
-   .project-wrap,
+   .project-wrap{
+      width: 100%;
+      height: 1911px;
+   }
+
+   .project-con-wrap{
+      max-width: fit-content;
+      flex-direction: column-reverse;
+   }
+
+   .pro-con-right{
+      margin: -2px 20% 0 15%;
+   }
+
+   .project-text{
+      text-align: center;
+   }
    .service-wrap{
       display: none;
+
    }
+
+   .ani-player{
+      padding: 0 10%;
+   }
+
+   .ecoce-back-img,
+   .moado-back-img{
+     width: 100%;
+   }
+
+   
+
 }
 
 /* 반응형 - 해상도 768px 이하 */
@@ -635,5 +680,13 @@ footer{
 
    .hide-nav-texts{
       height: 220px;
+   }
+
+   /* project */
+   .pro-con-right{
+      max-width: 475px;
+   }
+   .project-text{
+      text-align: right;
    }
 }
