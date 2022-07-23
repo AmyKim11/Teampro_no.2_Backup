@@ -131,7 +131,26 @@ header{
    width: 100%;
    margin: 0 auto;
 }
+.small-size-nav-wrap{
+   position: absolute;
+   width: 400px;
+   top: 12px;
+   right: 160px;
+   margin-bottom: 16px;
+   display: none;
+}
+.slide-nav-text a:last-of-type li{
+   padding-right: 18px;
+}
 
+.slide-nav-text a:nth-of-type(2) li{
+   padding-left: 18px;
+}
+
+.slide-nav-text{
+   display: flex;
+   justify-content: space-between;
+}
 .hide-nav-flex-wrap{
    position: absolute;
    display: flex;
@@ -140,6 +159,7 @@ header{
    top: 12px;
    right: 160px;
 }
+
 
 .hide-nav-texts a li{
    text-align: left;
@@ -546,17 +566,44 @@ footer{
 
 /* 반응형 - 해상도 (768px~1024이하일때) */
 
-@media (min-width:768px) and (max-width:1024px) {
+@media (max-width:941px) and (max-width:1024px) {
    /* nav 부분 */
    .header-con-wrap{
       max-width: 1024px;
    }
 
-
+   .project-wrap,
+   .service-wrap{
+      display: none;
+   }
 }
 
 /* 반응형 - 해상도 768px 이하 */
-@media  (max-width:767px) {
+@media  (max-width:940px) {
+   /* nav  */
+   .header-con-wrap nav{
+      display: none;
+   }
+
+   .small-size-nav-wrap{
+      position: relative;
+      width: 100%;
+      height: 30px;
+      right: 0;
+      display: block;
+      border-bottom: #F8F8F8 1px solid;
+   }
+
+   .slide-nav-text{
+      position: absolute;
+      width: 400px;
+      right: 160px;
+   }   
+   .hide-nav-flex-wrap{
+      top: 46px;
+   }
+
+   /* footer */
    footer{
       height: 331px;
    }
@@ -571,5 +618,22 @@ footer{
 
    .footer-left-con{
       margin-bottom: 30px;
+   }
+}
+
+@media (max-width:767px) {
+   /* ci logo 부분 */
+   .ci-logo{
+      padding-left: 10%;
+   }
+   /* nav 부분 */
+   .slide-nav-text,
+   .hide-nav-flex-wrap{
+      right: 0;
+      margin: 0 10%;
+   }
+
+   .hide-nav-texts{
+      height: 220px;
    }
 }
