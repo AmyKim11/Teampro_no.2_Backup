@@ -342,7 +342,9 @@ header{
 
 /* -----------서비스 내용 부분(왼쪽)---------------- */
 .ser-con-left{
+   width: 70%;
    padding-top: 100px;
+   margin-right: 80px;
 }
 
 .service-text h2{
@@ -365,16 +367,23 @@ header{
 /* -----------서비스 내용 부분(오른쪽)---------------- */
 .ser-con-right{
    position: relative;
+   width: 80%;
    padding-top: 100px;
-   margin-right: 360px;
 }
 
 .ser-develop-wrap{
    position: relative;
    /* overflow: hidden; */
    border-radius: 30px;
-   width: 300px;
+   width: 100%;
+   max-width: 300px;
    height: 375px;
+}
+
+.ser-app-web-wrap{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
 }
 
 .app-develop-img h4,
@@ -393,7 +402,8 @@ header{
 }
 
 .app-develop-img{
-   width: 300px;
+   width: 100%;
+   max-width: 300px;
    height: 375px;
    text-align: center;
    color: #FFFFFF;
@@ -446,38 +456,55 @@ header{
    opacity: 1;
    transition-duration: 0.3s;
 }
+.ser-app,
+.ser-ai{
+   margin-right: 5%;
+}
 
+.ser-app,
 .ser-web{
-   position: absolute;
-   top: 218px;
-   left: 380px;
+   /* position: absolute; */
+   width: 100%;
+   max-width: 300px;
+   /* top: 218px;
+   left: 380px; */
+}
+
+.ser-web,
+.ser-xr{
+   margin-top: 118px;
 }
 
 .ser-web-wrap{
    position: relative;
    /* overflow: hidden; */
    border-radius: 30px;
-   width: 300px;
+   /* width: 100%; */
+   max-width: 300px;
    height: 375px;
 }
 
 .web-back-img,
 .app-ai-img,
 .app-xr-img{
-   width: 300px;
+   width: 100%;
+   max-width: 300px;
    height: 375px;
    text-align: center;
    color: #FFFFFF;
    padding-top: 160px;
    border-radius: 30px;
-   background: rgba(0, 0, 0, 0.3) url('../img/service/app-dev.png') no-repeat center;
+   background: rgba(0, 0, 0, 0.3) url('../img/service/web-build.png') no-repeat center;
    background-blend-mode: darken;
 }
 
-.ser-ai{
-      position: absolute;
-      top: 555px;
-      left: 0px;
+.ser-ai,
+.ser-xr{
+      /* position: absolute; */
+      width: 100%;
+      max-width: 300px;
+      /* top: 555px;
+      left: 0px; */
    }
 
 
@@ -485,7 +512,8 @@ header{
    position: relative;
    /* overflow: hidden; */
    border-radius: 30px;
-   width: 300px;
+   /* width: 100%; */
+   max-width: 300px;
    height: 375px;
 }
 
@@ -493,17 +521,14 @@ header{
    background: rgba(0, 0, 0, 0.3) url('../img/service/ai-pic.png') no-repeat center;
 }
 
-.ser-xr{
-   position: absolute;
-   top: 673px;
-   left: 380px;
-}
+
 
 .ser-xr-wrap{
    position: relative;
    /* overflow: hidden; */
    border-radius: 30px;
-   width: 300px;
+   /* width: 100%; */
+   max-width: 300px;
    height: 375px;
 }
 
@@ -515,7 +540,7 @@ header{
 
 footer{
    position: absolute;
-   top: 4879px;
+   top: 5000px;
    left: 0;
    width: 100%;
    height: 250px;
@@ -582,11 +607,13 @@ footer{
 
 /* 반응형 - 해상도 (768px~1024이하일때) */
 
-@media (max-width:941px) and (max-width:1024px) {
+@media screen and (min-width:941px) and (max-width:1024px) {
    /* nav 부분 */
    .header-con-wrap{
       max-width: 1024px;
    }
+
+   /* 프로젝트 부분 */
 
    .project-wrap{
       width: 100%;
@@ -605,11 +632,7 @@ footer{
    .project-text{
       text-align: center;
    }
-   .service-wrap{
-      display: none;
-
-   }
-
+  
    .ani-player{
       padding: 0 10%;
    }
@@ -619,16 +642,45 @@ footer{
      width: 100%;
    }
 
+   /* 서비스 파트 */
+   .service-wrap{
+     width: 100%;
+      height: 2200px;
+      background: #F2F6FC;
+      top: 3461px;
+   }
    
+   .service-con-wrap{
+      max-width: fit-content;
+      flex-direction: column;
+   }
+
+   .service-text{
+      text-align: center;
+   }
+
+   .ser-con-left,
+   .ser-con-right{
+      width: 100%;
+   }
+
+   /* footer */
+   footer{
+      top: 5643px;
+   }
 
 }
 
 /* 반응형 - 해상도 768px 이하 */
-@media  (max-width:940px) {
+@media (max-width:940px) {
    /* nav  */
+   .header-con-wrap{
+      max-width: 1024px;
+   }
    .header-con-wrap nav{
       display: none;
    }
+
 
    .small-size-nav-wrap{
       position: relative;
@@ -648,8 +700,61 @@ footer{
       top: 46px;
    }
 
+
+    /* 프로젝트 부분 */
+
+ .project-wrap{
+   width: 100%;
+   height: 1911px;
+}
+
+.project-con-wrap{
+   max-width: fit-content;
+   flex-direction: column-reverse;
+}
+
+.pro-con-right{
+   margin: -2px 20% 0 15%;
+}
+
+.project-text{
+   text-align: center;
+}
+
+.ani-player{
+   padding: 0 10%;
+}
+
+.ecoce-back-img,
+.moado-back-img{
+  width: 100%;
+}
+
+/* 서비스 파트 */
+.service-wrap{
+  width: 100%;
+   height: 2200px;
+   background: #F2F6FC;
+   top: 3461px;
+}
+
+.service-con-wrap{
+   max-width: fit-content;
+   flex-direction: column;
+}
+
+.service-text{
+   text-align: center;
+}
+
+.ser-con-left,
+.ser-con-right{
+   width: 100%;
+}
+
    /* footer */
    footer{
+      top: 5643px;
       height: 331px;
    }
 
@@ -688,5 +793,10 @@ footer{
    }
    .project-text{
       text-align: right;
+   }
+
+   /* service 부분 */
+   .service-text{
+      text-align: left;
    }
 }
