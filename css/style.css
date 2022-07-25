@@ -64,6 +64,7 @@ header{
 }
 .nav-text a{
    display: block;
+   text-decoration: none;
 }
 .nav-text li{
    display: block;
@@ -122,6 +123,11 @@ header{
    border: 1px solid #707070;
    border-top: none;
    opacity: 0.9;
+   color: #FFFFFF;
+}
+
+.hide-nav-texts a{
+   text-decoration: none;
    color: #FFFFFF;
 }
 
@@ -671,7 +677,7 @@ footer{
 
 }
 
-/* 반응형 - 해상도 768px 이하 */
+/* 반응형 - 해상도 940px 이하 */
 @media (max-width:940px) {
    /* nav  */
    .header-con-wrap{
@@ -770,7 +776,7 @@ footer{
       margin-bottom: 30px;
    }
 }
-
+/* 해상도 767이하 */
 @media (max-width:767px) {
    /* ci logo 부분 */
    .ci-logo{
