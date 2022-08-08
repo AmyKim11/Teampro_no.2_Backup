@@ -6,9 +6,9 @@
 * header 부분
    * position: fixed 되었을때 스크롤 이벤트를 주어, 아래로 스크롤 시 배경 및 글자 색 변경.
    ![header-1](./img/reportimg/header-1.png)
-   	\downarrow
+   	&darr;
    ![header-2](./img/reportimg/header-2.png)
 
 * service 부분
-  * 해상도가 줄어들때 안의 박스들도 같이 줄어들게 width 값 조절함.
+  * 해상도가 줄어들때 안의 박스들도 같이 줄어들게 width 값 조절함.  
    ![service-1](./img/reportimg/service-1.png)
