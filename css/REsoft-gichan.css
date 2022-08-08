@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   list-style: none;
+}
+
+body{
+   font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* ------------------header부분 ----------------*/
+header{
+   position: relative;
+   text-align: center;
+   top: 0px;
+   left: 0px;
+   position: fixed;
+   width: 100%;
+   height: 80px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border-left: none;
+   border-right: none;
+   border: 1px solid #DBDBDB;
+   opacity: 1;
+   z-index: 90;
+   
+}
+
+.header-con-wrap{
+   display: inline-block;
+   position: relative;
+   max-width: 1440px;
+   width: 100%;
+}
+
+.ci-logo{
+   width: fit-content;
+   /* position: absolute; */
+   padding: 25px 0 0 120px;
+}
+
+.ci-logo img{
+   width: 133px;
+   height: 30px;
+   /* filter:invert(100%) sepia(100%) saturate(2%) hue-rotate(190deg) brightness(102%) contrast(101%); */
+}
+
+.header-con-wrap nav{
+   margin-top: -35px;
+   padding-right: 160px;
+   float: right;
+   width: fit-content;
+   margin-right: 0;
+}
+
+.nav-text{
+   display: flex;
+   justify-content: space-between;
+   width: 400px;
+}
+.nav-text a{
+   display: block;
+   text-decoration: none;
+}
+.nav-text li{
+   display: block;
+   letter-spacing: 0px;
+   color: #000000;
+   opacity: 1;
+   font-size: 20px;
+   font-weight: bold;
+   width: 74px;
+   height: 29px;
+   cursor: pointer;
+   text-transform:uppercase; 
+}
+
+
+.nav-text li:hover{
+   color: #184B9F;
+}
+.nav-text a:first-of-type li:after,  /*<- 두번째, 세번째, 네번째 서브 해당되는 사람이면 살려야함*/
+.nav-text a:nth-of-type(2) li:after /*<- 첫번째, 세번째, 마지막 서브해당되는 사람이면 살려야 함*/
+{ /*<- 첫번째, 두번째 해당되는 서브만 살림*/
+   display:block;
+   margin-top: 3px;
+   content: '';
+   height: 6px;
+   background: #184B9F; 
+   border-radius: 3px; 
+   transform: scaleX(0);  
+   transition: transform 250ms ease-in-out;
+   transform-origin: 0% 50%;
+}
+
+.nav-text a:first-of-type li:hover:after, /*위와 같은 규칙*/
+.nav-text a:nth-of-type(2) li:hover:after
+{
+   transform: scaleX(1);
+}
+
+
+
+.nav-text .underline{
+   margin-top: 3px;
+   width: 74px;
+   height: 6px;
+   background: #184B9F; 
+   border-radius: 3px; 
+}
+
+.under-1{
+    visibility: hidden;  
+}
+.nav-text .under-2{
+   display: none; /*<-두번째 서브 페이지는 주석처리 하고, 나머지 1이랑3은 살림*/
+}
+
+
+
+/*.nav-text a:nth-of-type(2) li{
+    /* color: #184B9F;} */ /*<- 첫번째 세번째 네번째 서브 담당자는 주석처리해야함*/
+
+.nav-text a:last-of-type li{
+     color: #184B9F;}  /*<-첫번째, 두번째 서브 담당자는 주석처리 해야함*/
+
+
+.hamburger-menu{
+   position: absolute;
+   top: 25px;
+   right: 0;
+   width: 32px;
+   height: 32px;
+   cursor: pointer;
+   background: transparent url('../img/nav/hamburger_menu_black.svg') 0% 0% no-repeat padding-box;
+   opacity: 1;
+}
+
+.hide-nave{
+   /* top: 24px;
+   left: 0px; */
+   width: 100%;
+   height: 263px;
+}
+
+.hide-nav-texts{
+   position: absolute;
+   top: 79px;
+   right: 0;
+   width: 100%;
+   height: 207px;
+   background: #184B9F 0% 0% no-repeat padding-box;
+   border: 1px solid #707070;
+   border-top: none;
+   opacity: 0.9;
+   color: #FFFFFF;
+}
+
+.hide-nav-texts a{
+   text-decoration: none;
+   color: #FFFFFF;
+}
+
+.hide-nav-con-wrap{
+   position: relative;
+   max-width: 1440px;
+   width: 100%;
+   margin: 0 auto;
+}
+.small-size-nav-wrap{
+   position: absolute;
+   width: 400px;
+   top: 12px;
+   right: 160px;
+   margin-bottom: 16px;
+   display: none;
+}
+.slide-nav-text a:last-of-type li{
+   padding-right: 18px;
+}
+
+.slide-nav-text a:nth-of-type(2) li{
+   padding-left: 18px;
+}
+
+.slide-nav-text{
+   display: flex;
+   justify-content: space-between;
+}
+.hide-nav-flex-wrap{
+   position: absolute;
+   display: flex;
+   justify-content: space-between;
+   width: 400px;
+   top: 12px;
+   right: 160px;
+   
+}
+
+.hide-nav-texts a li{
+   text-align: left;
+   padding-bottom: 5px;
+   letter-spacing: 0px;
+   opacity: 1;
+   cursor: pointer;
+}
+.hide-nav-texts{
+   display: none;
+}
+
+
+/***************nav**************/
+
+
+.head-wrap img{
+   margin-top: 80px;
+    width: 1920px;
+}
+
+.head-wrap p {
+   position: absolute;
+   top: 201px;
+   left: 886px;
+   width: 148px;
+   height: 58px;
+   font-weight: 500;
+   color:white;
+   font-size:40px;
+}
+
+
+/*****************content /REsoft 소식/  *************/
+.content-text{
+    position: absolute;
+    top: 480px;
+    left: 240px;
+    width: 211px;
+    height: 58px;
+    text-align: left;
+    letter-spacing: 0;
+}
+
+.content-text p:nth-child(1){
+    color:black;
+    font-size: 40px;
+    font-weight: 700;
+ 
+}
+
+.content-text p:nth-child(2){
+    color:#c8c8c8;
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+/*******         REsoft소식 밑 이미지*******/
+
+.content {
+    position: relative;
+    top: 280px;
+    left: 240px;
+    width: 1440px;
+    height: 100%;
+    display: flex;
+   
+}
+
+
+.content-2 {
+   position: relative;
+   top: 280px;
+   left: 240px;
+   width: 1440px;
+   height: 100%;
+   display: flex;
+  
+}
+
+/****** 메인 이미지+텍스트 크기 **********/
+.content-main{ 
+   display:flex;
+   flex-wrap: wrap;
+   width: 680px;
+   height: 430px;
+   margin-right:80px;
+   margin-bottom: 110px;
+
+}
+
+
+
+
+/** 이미지 + 글 한구역당 크기**/
+
+.content-main-1{
+   width:680px;
+   height: 360px;
+   border: 1px solid #707070;
+   border-radius: 20px;
+   overflow: hidden;
+
+}
+
+/** text **/
+.content-main-text{
+   position: absolute;
+   top: 375px;
+   width: 680px;
+   height: 58px;
+   text-align: left;
+   letter-spacing: 0;
+}
+
+.content-main-text p:nth-child(1){
+   color:black;
+   font-size: 20px;
+   font-weight: 700;
+}
+
+
+.content-main-text p:nth-child(2){
+   color:#c8c8c8;
+   font-size: 16px;
+   font-weight: 500;
+}
+
+
+.content-main .img1{
+   width: 680px;
+   height: 360px;
+   transition: 0.4s ease-in-out;
+}
+
+.content-main:hover .img1{
+   transform: scale(1.2);
+   filter: brightness(50%);
+   cursor: pointer;
+}
+
+.content-main:hover .main-txt-1{
+   color:#184B9F;
+   cursor: pointer;
+}
+/*
+ /*#button{
+   position: relative;
+   width: 200px;
+   height: 73px;
+   line-height: 73px; 
+   text-align: center;
+   top: 200px;
+   left: 860px;
+   border: 1px solid black;
+   border-radius: 43px;
+   background-color: #FFFFFF;
+   transition: 1s;  
+   overflow: hidden;
+   font-weight: 500;
+}
+
+#btn1 :hover{ 
+   color: #FFFFFF;
+   background-color: #184B9F;
+   transition: 1s; 
+   cursor: pointer;
+}
+
+.content-more{
+   width:680px;
+   height: 417px;
+}
+/*
+.more-img{
+   width: 680px;
+   height: 360px;
+   position: relative;
+   top: 280px;
+   left: 240px;
+   margin-right:80px;
+   margin-bottom: 110px;
+}
+
+
+
+   more 한구역  
+.more{
+   position: relative;
+   width: 1560px;
+    height: 100%;
+   left: 240px;
+   top: 280px;
+    display: flex;
+   flex-wrap: wrap;
+   overflow: hidden;
+   background-color: red;
+}
+.more-content{
+   width: 680px;
+   height: 100%;
+   margin-bottom: 200px;
+   margin-right:80px;
+   overflow: hidden;
+}
+
+
+
+
+이미지
+ .b { 
+   display: none;
+   width:680px;
+   height: 360px;
+   border: 1px solid #707070;
+   border-radius: 20px;
+   overflow: hidden;
+  
+ }
+
+
+ .b .more-img{
+   height: 360px;
+   width: 680px;
+   transition: 0.4s ease-in-out;
+ }
+
+
+ .more-txt{
+   text-align: left;
+   letter-spacing: 0;
+   position: absolute;
+ } 
+
+ .more-txt-1{
+   color:black;
+   font-size: 20px;
+   font-weight: 700;
+   padding-top:6px;
+ }
+
+ .more-txt-2{
+   color:#c8c8c8;
+   font-size: 16px;
+   font-weight: 500;
+ }
+ 
+/* 버튼 
+ .a {
+   position: relative;
+   left: 860px;
+   width: 200px;
+   height: 73px;
+   line-height: 73px; 
+   text-align: center;
+   border: 1px solid black;
+   border-radius: 43px;
+   background-color: #FFFFFF;
+   transition: 1s;  
+   font-weight: 500;
+ }
+
+ */
+
+
+ /********** more hover *************/
+
+ .more-content :hover img{
+   transform: scale(1.2);
+   filter: brightness(50%);
+   cursor: pointer
+ }
+
+ .more-content:hover .more-txt-1{
+   color:#184B9F;
+   cursor: pointer;
+ }
+
+ .b {
+    display: none;
+    width: 100%; 
+    height: 100%; 
+    left: 200px;
+    }
+
+.a{
+      position: relative;
+      top:300px;
+      left: 860px;
+      width: 200px;
+      height: 73px;
+      line-height: 73px; 
+      text-align: center;
+      border: 1px solid #1E1E1E;
+      border-radius: 43px;
+      background-color: #FFFFFF;
+      transition: 0.7s;  
+      font-weight: 500;
+      font-size: 20px;
+      font-family: 'Noto Sans KR', sans-serif;
+   }
+
+.a:hover{
+   color: white;
+   background-color: #184B9F;
+
+}
+
+
+
+/* ----------------footer 부분----------------- */
+
+footer{
+   position: relative; 
+   top: 400px;
+   left: 0;
+   width: 100%;
+   height: 250px;
+   background: #E9E9E9 0% 0% no-repeat padding-box;
+
+}
+
+.footer-con-wrap{
+   position: absolute; /*<-absolute 추가해 주시고*/
+   left: 0;/*<-left랑 right 추가 해주세요*/
+   right: 0;
+   margin: 50px auto;
+   max-width: 1440px;
+   width: 100%;
+}
+
+.footer-ci{
+   display: flex;
+   justify-content: space-between;
+   max-width: 510px;
+}
+
+.footer-ci .footer-copyright{
+   padding-top: 21px;
+   margin-bottom: 0px;
+   color: #9E9E9E;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.footer-text-wrap{
+   width: 100%;
+   display: flex;
+   margin-top: 30px;
+   color: #9E9E9E;
+   font-weight: 300;
+   font-size: 16px;
+   word-wrap: keep-all;
+}
+
+.footer-left-con p,
+.footer-right-con p{
+   margin-bottom: 0;
+}
+
+.footer-left-con{
+   height: 76px;
+   margin-right: 10%;
+}
+.footer-right-con{
+   height: 50px;
+   word-wrap: keep-all;
+}
+
+
+/* 반응형 - 해상도 (941px~1024이하일때) */
+
+@media screen and (min-width:941px) and (max-width:1280px) {
+   /* nav 부분 */
+   .header-con-wrap{
+      max-width: 1024px;
+   }
+
+   /* .hamburger-menu{
+      right: 20px;
+   } */
+  
+   /* footer */
+   footer{
+      top: 5643px;
+   }
+
+}
+
+/* 반응형 - 해상도 940px 이하 */
+@media (max-width:940px) {
+   /* nav  */
+   .header-con-wrap{
+      max-width: 1024px;
+   }
+   .header-con-wrap nav{
+      display: none;
+   }
+
+   .hamburger-menu{
+      right: 20px;
+   }
+
+   .small-size-nav-wrap{
+      position: relative;
+      width: 100%;
+      height: 30px;
+      right: 0;
+      display: block;
+      border-bottom: #F8F8F8 1px solid;
+   }
+
+   .slide-nav-text{
+      position: absolute;
+      width: 400px;
+      right: 160px;
+   }   
+   .hide-nav-flex-wrap{
+      top: 46px;
+   }
+
+
+}
+
+/* 해상도 767이하 */
+@media (max-width:768px) {
+   /* ci logo 부분 */
+   .ci-logo{
+      padding-left: 10%;
+   }
+   /* nav 부분 */
+   .slide-nav-text,
+   .hide-nav-flex-wrap{
+      right: 0;
+      margin: 0 10%;
+   }
+
+   .hide-nav-texts{
+      height: 220px;
+   }
+
+}

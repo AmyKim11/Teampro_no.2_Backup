@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   list-style: none;
+}
+
+body{
+   font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* ------------------header부분 ----------------*/
+
+header{
+   position: relative;
+   text-align: center;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 80px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border-left: none;
+   border-right: none;
+   border: 1px solid #DBDBDB;
+   opacity: 1;
+   z-index: 90;
+   
+}
+
+.header-con-wrap{
+   display: inline-block;
+   position: relative;
+   max-width: 1440px;
+   width: 100%;
+}
+
+.ci-logo{
+   width: fit-content;
+   /* position: absolute; */
+   padding: 25px 0 0 120px;
+}
+
+.ci-logo img{
+   width: 133px;
+   height: 30px;
+   /* filter:invert(100%) sepia(100%) saturate(2%) hue-rotate(190deg) brightness(102%) contrast(101%); */
+}
+
+.header-con-wrap nav{
+   margin-top: -35px;
+   padding-right: 160px;
+   float: right;
+   width: fit-content;
+   margin-right: 0;
+}
+
+.nav-text{
+   display: flex;
+   justify-content: space-between;
+   width: 400px;
+}
+.nav-text a{
+   display: block;
+   text-decoration: none;
+}
+.nav-text li{
+   display: block;
+   letter-spacing: 0px;
+   color: #000000;
+   opacity: 1;
+   font-size: 20px;
+   font-weight: bold;
+   width: 74px;
+   height: 29px;
+   cursor: pointer;
+   text-transform:uppercase; 
+}
+
+
+.nav-text li:hover{
+   color: #184B9F;
+}
+/* .nav-text a:first-of-type li:after, */ /*<- 두번째, 세번째, 네번째 서브 해당되는 사람이면 살려야함*/
+.nav-text a:nth-of-type(2) li:after, /*<- 첫번째, 세번째, 마지막 서브해당되는 사람이면 살려야 함*/
+.nav-text a:last-of-type li:after{ /*<- 첫번째, 두번째 해당되는 서브만 살림*/
+   display:block;
+   margin-top: 3px;
+   content: '';
+   height: 6px;
+   background: #184B9F; 
+   border-radius: 3px; 
+   transform: scaleX(0);  
+   transition: transform 250ms ease-in-out;
+   transform-origin: 0% 50%;
+}
+
+/*.nav-text a:first-of-type li:hover:after,*/ /*위와 같은 규칙*/
+.nav-text a:nth-of-type(2) li:hover:after,
+.nav-text a:last-of-type li:hover:after{
+   transform: scaleX(1);
+}
+
+
+.nav-text a:first-of-type li{
+   /* position: absolute;
+   top: 26px;
+   left: 1198px; */
+   color: #184B9F; /*<- 두번째, 세번째, 네번째 서브 해당되는 사람은 주석처리 해야 함*/
+}
+
+.nav-text .underline{
+   margin-top: 3px;
+   width: 74px;
+   height: 6px;
+   background: #184B9F; 
+   border-radius: 3px; 
+}
+
+/*.under-1{
+    visibility: hidden;  
+}*/
+.nav-text .under-2{
+   display: none; /*<-두번째 서브 페이지는 주석처리 하고, 나머지 1이랑3은 살림*/
+}
+.nav-text .under-3{
+   display: none;/*<-세번째,네번째(마지막) 서브 페이지는 주석처리 함 위의
+   under-1,2는 살려야 함*/
+}
+
+
+
+/*.nav-text a:nth-of-type(2) li{
+    /* color: #184B9F;} */ /*<- 첫번째 세번째 네번째 서브 담당자는 주석처리해야함*/
+
+/*.nav-text a:last-of-type li{
+    /* color: #184B9F;} */ /*<-첫번째, 두번째 서브 담당자는 주석처리 해야함*/
+
+
+.hamburger-menu{
+   position: absolute;
+   top: 25px;
+   right: 20px;
+   width: 32px;
+   height: 32px;
+   cursor: pointer;
+   background: transparent url('../img/nav/hamburger_menu_black.svg') 0% 0% no-repeat padding-box;
+   opacity: 1;
+}
+
+.hide-nave{
+   /* top: 24px;
+   left: 0px; */
+   width: 100%;
+   height: 263px;
+}
+
+.hide-nav-texts{
+   position: absolute;
+   top: 79px;
+   right: 0;
+   width: 100%;
+   height: 207px;
+   background: #184B9F 0% 0% no-repeat padding-box;
+   border: 1px solid #707070;
+   border-top: none;
+   opacity: 0.9;
+   color: #FFFFFF;
+}
+
+.hide-nav-texts a{
+   text-decoration: none;
+   color: #FFFFFF;
+}
+
+.hide-nav-con-wrap{
+   position: relative;
+   max-width: 1440px;
+   width: 100%;
+   margin: 0 auto;
+}
+.small-size-nav-wrap{
+   position: absolute;
+   width: 400px;
+   top: 12px;
+   right: 160px;
+   margin-bottom: 16px;
+   display: none;
+}
+.slide-nav-text a:last-of-type li{
+   padding-right: 18px;
+}
+
+.slide-nav-text a:nth-of-type(2) li{
+   padding-left: 18px;
+}
+
+.slide-nav-text{
+   display: flex;
+   justify-content: space-between;
+}
+.hide-nav-flex-wrap{
+   position: absolute;
+   display: flex;
+   justify-content: space-between;
+   width: 400px;
+   top: 12px;
+   right: 160px;
+}
+
+.hide-nav-texts a li{
+   text-align: left;
+   padding-bottom: 5px;
+   letter-spacing: 0px;
+   opacity: 1;
+   cursor: pointer;
+}
+.hide-nav-texts{
+   display: none;
+}
+
+/* 반응형 - 해상도 (941px~1024이하일때) */
+
+@media screen and (min-width:941px) and (max-width:1024px) {
+   /* nav 부분 */
+   .header-con-wrap{
+      max-width: 1024px;
+   }
+
+  
+   /* footer */
+   footer{
+      top: 5643px;
+   }
+
+}
+
+/* 반응형 - 해상도 940px 이하 */
+@media (max-width:940px) {
+   /* nav  */
+   .header-con-wrap{
+      max-width: 1024px;
+   }
+   .header-con-wrap nav{
+      display: none;
+   }
+
+
+   .small-size-nav-wrap{
+      position: relative;
+      width: 100%;
+      height: 30px;
+      right: 0;
+      display: block;
+      border-bottom: #F8F8F8 1px solid;
+   }
+
+   .slide-nav-text{
+      position: absolute;
+      width: 400px;
+      right: 160px;
+   }   
+   .hide-nav-flex-wrap{
+      top: 46px;
+   }
+
+
+}
+
+/* 해상도 767이하 */
+@media (max-width:767px) {
+   /* ci logo 부분 */
+   .ci-logo{
+      padding-left: 10%;
+   }
+   /* nav 부분 */
+   .slide-nav-text,
+   .hide-nav-flex-wrap{
+      right: 0;
+      margin: 0 10%;
+   }
+
+   .hide-nav-texts{
+      height: 220px;
+   }
+
+}
+
+/* ----------------5page 부분----------------- */
+
+.info-madang{
+   top: 8%;
+   left: 0px;
+   width: 100%;
+   height: 300px;
+}
+
+.info-madang-ui{
+   background: #FFFFFF 0% 0% no-repeat padding-box url('../img/infomadang/rectan64.png');
+   background-size: 100%; 
+   opacity: 1;
+}
+
+.info-madang-ui img{
+   width: 100%;
+   height: 300px;
+}
+
+.info-madang-text{
+   color:#FFFFFF;
+   text-align: center;
+   padding: 6.5%;
+}
+
+.all-madang{
+   max-width: 1440px;
+   width: 100%;
+   margin: 100px auto;
+   justify-content: space-between;
+   display: flex;
+}
+
+.article-news{
+   margin-left: 2%;
+}
+
+.resoft-news{
+   color: #1e1e1e;
+   opacity: 1;
+   font-size: 30px;
+   width: 170px;
+}
+
+.small-news{
+   color: #c8c8c8;
+   opacity: 1;
+}
+
+.black-pass{
+   display: inline-block;
+   position: relative;
+   background: 0% 0% no-repeat padding-box;
+   padding: 2% 0;
+   max-width: 123px;
+   width: 100%;
+   margin-top: 30px;
+}
+
+.info-pass{
+   display: inline-block;
+   background: #1e1e1e 0% 0% no-repeat padding-box;
+   opacity: 1;
+   border-radius: 50%;
+   width: 30px;
+   height: 30px; 
+}
+
+.info-pass img{
+   display: inline-block;
+   margin: 25%; 
+   width: 50%;
+}
+
+.info-list{
+   position: absolute;
+   top: 6px;
+   left: 50px;
+   width: 100%;
+   letter-spacing: 0.8px;
+}
+
+.info-main-text{
+   position: relative;
+   max-width: 1000px;
+   width: 100%;
+   margin-left: 10%;
+   margin-right: 2%;
+   margin-top: 100px;
+}
+
+.info-main-text p{
+   text-align: left;
+   padding: 0.6%;
+   letter-spacing: 0.8px;
+   font-size: 12.5px;
+   font-weight: 450;
+}
+
+
+.lorem{
+   /* padding-right: 30%;
+   width: 900px; */
+   text-align: left;
+}
+
+.info-date{
+   text-align: left;
+   letter-spacing: 0.8px;
+   color: #AAAAAA;
+   opacity: 1;
+   font-weight: 100;
+   margin-top: 10px;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #184B9F;
+}
+
+.image-main-madang{
+   position: absolute;
+   max-width: 1000px;
+   width: 100%;
+}
+
+.image-main-madang img{
+   width: 100%;
+   margin-top: 50px;
+}
+
+/* .image-main-madang img{ 
+   width: 67%;
+}
+*/
+
+/* ----------------footer 부분----------------- */
+
+footer{
+   position: absolute;
+   top: 2000px;
+   left: 0;
+   width: 100%;
+   height: 250px;
+   background: #E9E9E9 0% 0% no-repeat padding-box;
+
+}
+
+.footer-con-wrap{
+   max-width: 1440px;
+   width: 100%;
+   margin: 50px auto;
+   padding: 0 3% 0 3%;
+}
+
+.footer-ci{
+   display: flex;
+   justify-content: space-between;
+   max-width: 510px;
+}
+
+.footer-ci .footer-copyright{
+   padding-top: 21px;
+   margin-bottom: 0px;
+   color: #9E9E9E;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.footer-text-wrap{
+   width: 100%;
+   display: flex;
+   margin-top: 30px;
+   color: #9E9E9E;
+   font-weight: 300;
+   font-size: 16px;
+   word-wrap: keep-all;
+}
+
+.footer-left-con p,
+.footer-right-con p{
+   margin-bottom: 0;
+}
+
+.footer-left-con{
+   height: 76px;
+   margin-right: 10%;
+}
+.footer-right-con{
+   height: 50px;
+   word-wrap: keep-all;
+}
+
+
+/* 반응형 - 해상도 (768px~1024이하일때) */
+
+@media screen and (min-width:941px) and (max-width:1024px) {
+  
+   /* footer */
+   footer{
+      top: 5643px;
+   }
+
+}
+
+/* 반응형 - 해상도 940px 이하 */
+@media (max-width:940px) {
+
+   /* footer */
+   footer{
+      top: 5643px;
+      height: 331px;
+   }
+
+   .footer-con-wrap{
+      padding: 0 5%;
+   }
+
+   .footer-text-wrap{
+      flex-direction: column;
+   }
+
+   .footer-left-con{
+      margin-bottom: 30px;
+   }
+}
+
+/* 해상도 767이하 */
+@media (max-width:767px) {
+   /* ci logo 부분 */
+   .ci-logo{
+      padding-left: 10%;
+   }
+   /* nav 부분 */
+   .slide-nav-text,
+   .hide-nav-flex-wrap{
+      right: 0;
+      margin: 0 10%;
+   }
+
+   .hide-nav-texts{
+      height: 220px;
+   }
+
+}
+
+
+

@@ -1,0 +1,741 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------header부분 ----------------*/
+header {
+    position: relative;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 80px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-left: none;
+    border-right: none;
+    border: 1px solid #DBDBDB;
+    opacity: 1;
+    z-index: 90;
+
+}
+
+.header-con-wrap {
+    display: inline-block;
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.ci-logo {
+    width: fit-content;
+    /* position: absolute; */
+    padding: 25px 0 0 120px;
+}
+
+.ci-logo img {
+    width: 133px;
+    height: 30px;
+    /* filter:invert(100%) sepia(100%) saturate(2%) hue-rotate(190deg) brightness(102%) contrast(101%); */
+}
+
+.header-con-wrap nav {
+    margin-top: -35px;
+    padding-right: 160px;
+    float: right;
+    width: fit-content;
+    margin-right: 0;
+}
+
+.nav-text {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.nav-text a {
+    display: block;
+    text-decoration: none;
+}
+
+.nav-text li {
+    display: block;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-size: 20px;
+    font-weight: bold;
+    width: 74px;
+    height: 29px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+.nav-text li:hover {
+    color: #184B9F;
+}
+
+/* .nav-text a:first-of-type li:after, */
+/*<- 두번째, 세번째, 네번째 서브 해당되는 사람이면 살려야함*/
+.nav-text a:nth-of-type(2) li:after,
+/*<- 첫번째, 세번째, 마지막 서브해당되는 사람이면 살려야 함*/
+.nav-text a:last-of-type li:after {
+    /*<- 첫번째, 두번째 해당되는 서브만 살림*/
+    display: block;
+    margin-top: 3px;
+    content: '';
+    height: 6px;
+    background: #184B9F;
+    border-radius: 3px;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin: 0% 50%;
+}
+
+/*.nav-text a:first-of-type li:hover:after,*/
+/*위와 같은 규칙*/
+.nav-text a:nth-of-type(2) li:hover:after,
+.nav-text a:last-of-type li:hover:after {
+    transform: scaleX(1);
+}
+
+
+.nav-text a:first-of-type li {
+    /* position: absolute;
+    top: 26px;
+    left: 1198px; */
+    color: #184B9F;
+    /*<- 두번째, 세번째, 네번째 서브 해당되는 사람은 주석처리 해야 함*/
+}
+
+.nav-text .underline {
+    margin-top: 3px;
+    width: 74px;
+    height: 6px;
+    background: #184B9F;
+    border-radius: 3px;
+}
+
+/*.under-1{
+     visibility: hidden;  
+ }*/
+.nav-text .under-2 {
+    display: none;
+    /*<-두번째 서브 페이지는 주석처리 하고, 나머지 1이랑3은 살림*/
+}
+
+.nav-text .under-3 {
+    display: none;
+    /*<-세번째,네번째(마지막) 서브 페이지는 주석처리 함 위의
+    under-1,2는 살려야 함*/
+}
+
+.hamburger-menu {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url('../img/nav/hamburger_menu_black.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.hide-nave {
+    /* top: 24px;
+    left: 0px; */
+    width: 100%;
+    height: 263px;
+}
+
+.hide-nav-texts {
+    position: absolute;
+    top: 79px;
+    right: 0;
+    width: 100%;
+    height: 207px;
+    background: #184B9F 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-top: none;
+    opacity: 0.9;
+    color: #FFFFFF;
+}
+
+.hide-nav-texts a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.hide-nav-con-wrap {
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.small-size-nav-wrap {
+    position: absolute;
+    width: 400px;
+    top: 12px;
+    right: 160px;
+    margin-bottom: 16px;
+    display: none;
+}
+
+.slide-nav-text a:last-of-type li {
+    padding-right: 18px;
+}
+
+.slide-nav-text a:nth-of-type(2) li {
+    padding-left: 18px;
+}
+
+.slide-nav-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hide-nav-flex-wrap {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    top: 12px;
+    right: 160px;
+}
+
+.hide-nav-texts a li {
+    text-align: left;
+    padding-bottom: 5px;
+    letter-spacing: 0px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.hide-nav-texts {
+    display: none;
+}
+
+/* -----회사소개 그림부분----- */
+.intro {
+    left: 0px;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.intro img {
+    width: 100%;
+    height: 300px;
+
+}
+
+.intro-text {
+    top: 130px;
+    left: 45%;
+    width: 148px;
+    height: 58px;
+    position: absolute;
+    text-align: center;
+    font: 40px bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+/* -----REsoft 소개 부분----- */
+#about-us {
+    width: 100%;
+    background-color: white;
+}
+
+.title {
+    padding-top: 100px;
+    margin-left: 240px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.title p:last-child {
+    font-size: 18px;
+    color: #C8C8C8;
+    text-align: left;
+}
+
+#about-us .about-box {
+    width: 1440px;
+    margin: 50px 240px 0 240px;
+    padding-bottom: 100px;
+}
+
+.about-box hr {
+    margin: 20px 0 20px 0;
+    border: 0px;
+    border-top: 1px solid #DBDBDB;
+}
+
+.about-box-text p {
+    display: inline-block;
+}
+
+.about-box-text p:first-child {
+    width: 200px;
+    margin-left: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.about-box-text p:last-child {
+    font-size: 20px;
+    color: #959595;
+    font-weight: bold;
+}
+
+.about-box-text2 {
+    display: inline;
+}
+
+/* -----연혁----- */
+#history {
+    top: 1236px;
+    left: 0px;
+    width: 100%;
+    height: 1314px;
+    background: #F9F9F9 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.history-box {
+    margin-top: 50px;
+    margin-left: 540px;
+    margin-right: 240px;
+    top: 1470px;
+    left: 540px;
+    width: 1140px;
+    height: 980px;
+}
+
+.history-box p {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.history-box hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 0px;
+    border-top: 1px solid #DBDBDB;
+}
+
+.history-content {
+    width: 710px;
+    top: -190.25px;
+    left: 389px;
+    border-left: 6px solid #C8C8C8;
+    height: 905px;
+    position: relative;
+}
+
+/* 연혁 큰 숫자 */
+.history-content h2 {
+    top: -30px;
+    font-size: 32px;
+    color: #184B9F;
+    position: relative;
+    left: -70px;
+}
+
+/* 연혁 동그라미 */
+.history-content h2::before {
+    content: "";
+    position: absolute;
+    left: 57px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #184B9F;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+}
+
+.history-content ol {
+    top: -43px;
+    position: relative;
+    list-style: none;
+}
+
+/* 연혁 내용 */
+.history-content li {
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.history-content div:first-child {
+    margin-bottom: 115px;
+}
+
+.history-content div {
+    margin-bottom: 50px;
+}
+
+/* ----조직도----- */
+#organization {
+    width: 100%;
+}
+
+.tree {
+    margin-left: 260px;
+    margin-bottom: 100px;
+    width: 1400px;
+    height: 532px;
+}
+
+.org-ul {
+    padding-top: 70px;
+    position: relative;
+}
+
+.org-li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 70px 50px 0 50px;
+}
+
+.li-left::before,
+.li-left::after {
+    right: 60%;
+}
+
+/* 아래 새로선 */
+.org-li::before,
+.org-li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 40%;
+    border-top: 1px solid #707070;
+    width: 170px;
+    height: 70px;
+}
+
+.org-li::after {
+    right: auto;
+    left: 50%;
+    border-left: 1px solid #707070;
+}
+
+.org-li :first-child::after {
+    right: auto;
+    left: 40%;
+    border-left: 1px solid #707070;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.org-li:only-child::after,
+.org-li:only-child::before {
+    display: none;
+}
+
+/*Remove space from the top of single children*/
+.org-li:only-child {
+    padding-top: 0;
+}
+
+/* 양쪽 선 제거 */
+.org-li:first-child::before,
+.org-li:last-child::after {
+    border: 0 none;
+}
+
+/* 오른쪽 새로선 */
+.org-li:last-child::before {
+    border-right: 1px solid #707070;
+    border-radius: 0 5px 0 0;
+}
+
+/* 위 새로선 */
+.org-ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #707070;
+    width: 0;
+    height: 70px;
+}
+
+.tree li p {
+    line-height: 80px;
+    width: 194px;
+    height: 74px;
+    border: 3px solid #184B9F;
+    color: #1E1E1E;
+    font-size: 26px;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.org {
+    background-color: #184B9F;
+    color: #FFFFFF !important;
+
+}
+
+.li-left {
+    padding-left: 0;
+}
+
+.li-right {
+    padding-right: 0;
+}
+
+.work {
+    margin-top: 40px;
+    width: 200px;
+}
+
+.work li {
+    list-style: none;
+    text-align: left;
+    font-size: 20px;
+    line-height: 38.4px;
+    letter-spacing: 0px;
+}
+
+/* -----특허&인증----- */
+#certification {
+    top: 3456px;
+    left: 0px;
+    width: 100%;
+    height: 1454px;
+    background: #F9F9F9 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.certification-box {
+    margin-top: 50px;
+    width: 990px;
+    height: 1120px;
+    margin-left: 620px;
+}
+
+.certification-box img {
+    margin-right: 160px;
+    margin-bottom: 90px;
+}
+
+.certification-box img:nth-child(3n) {
+    margin-right: 0;
+}
+
+/* -----오시는길----- */
+#directions {
+    width: 100%;
+}
+
+#map {
+    margin-top: 50px;
+    margin-left: 240px;
+    width: 1440px;
+    height: 680px;
+}
+
+.contact-box {
+    margin-left: 240px;
+    margin-bottom: 200px;
+    width: 1440px;
+    height: 230px;
+}
+
+.contact-box hr {
+    color: #DBDBDB;
+    border: 0px;
+    border-top: 1px solid #DBDBDB;
+}
+
+.contact-box hr:nth-child(2) {
+    color: black;
+}
+
+.contact-text {
+    height: 115px;
+}
+
+.contact-text p {
+    display: inline-block;
+    line-height: 115px;
+}
+
+.contact-text p:first-child {
+    width: 250px;
+    text-align: center;
+    margin-left: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1E1E1E;
+}
+
+.contact-text p:last-child {
+    font-size: 20px;
+    color: #959595;
+}
+
+/* ----------------footer 부분----------------- */
+
+footer {
+    position: absolute;
+    top: 6254px;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background: #E9E9E9 0% 0% no-repeat padding-box;
+
+}
+
+.footer-con-wrap {
+    max-width: 1440px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 0 3% 0 3%;
+}
+
+.footer-ci {
+    display: flex;
+    justify-content: space-between;
+    max-width: 510px;
+}
+
+.footer-ci .footer-copyright {
+    padding-top: 21px;
+    margin-bottom: 0px;
+    color: #9E9E9E;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer-text-wrap {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    color: #9E9E9E;
+    font-weight: 300;
+    font-size: 16px;
+    word-wrap: keep-all;
+}
+
+.footer-left-con p,
+.footer-right-con p {
+    margin-bottom: 0;
+}
+
+.footer-left-con {
+    height: 76px;
+    margin-right: 10%;
+}
+
+.footer-right-con {
+    height: 50px;
+    word-wrap: keep-all;
+}
+
+/* 반응형 - 해상도 (941px~1024이하일때) */
+
+@media screen and (min-width:941px) and (max-width:1024px) {
+
+    /* nav 부분 */
+    .header-con-wrap {
+        max-width: 1024px;
+    }
+
+
+    /* footer */
+    footer {
+        top: 5643px;
+    }
+
+}
+
+/* 반응형 - 해상도 940px 이하 */
+@media (max-width:940px) {
+
+    /* nav  */
+    .header-con-wrap {
+        max-width: 1024px;
+    }
+
+    .header-con-wrap nav {
+        display: none;
+    }
+
+
+    .small-size-nav-wrap {
+        position: relative;
+        width: 100%;
+        height: 30px;
+        right: 0;
+        display: block;
+        border-bottom: #F8F8F8 1px solid;
+    }
+
+    .slide-nav-text {
+        position: absolute;
+        width: 400px;
+        right: 160px;
+    }
+
+    .hide-nav-flex-wrap {
+        top: 46px;
+    }
+
+    /* footer */
+    footer {
+        top: 5643px;
+        height: 331px;
+    }
+
+    .footer-con-wrap {
+        padding: 0 5%;
+    }
+
+    .footer-text-wrap {
+        flex-direction: column;
+    }
+
+    .footer-left-con {
+        margin-bottom: 30px;
+    }
+
+}
+
+/* 해상도 767이하 */
+@media (max-width:767px) {
+
+    /* ci logo 부분 */
+    .ci-logo {
+        padding-left: 10%;
+    }
+
+    /* nav 부분 */
+    .slide-nav-text,
+    .hide-nav-flex-wrap {
+        right: 0;
+        margin: 0 10%;
+    }
+
+    .hide-nav-texts {
+        height: 220px;
+    }
+
+}
