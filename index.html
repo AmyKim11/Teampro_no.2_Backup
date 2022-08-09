@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <link rel="stylesheet" href="./css/style.css">
-   <link rel="stylesheet" href="./css/index_style.css">
    <link rel="stylesheet" href="./css/resoft_page.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet" href="./css/animate.css">
+   <script src="./js/wow.min.js"></script>
    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
    <title>Resoft</title>
 </head>
 
 <body>
    <!-- header_nav -->
-   <div class="head-nav">
+   <header>
       <div class="header-con-wrap">
          <div class="ci-logo"><a href="./index.html"><img src="./img/nav/CI_color.svg" alt=""></a></div>
-         <div class="navigator">
-            <div class="navigator-text">
-               <a href="./company-introduce.html"><div>회사소개</div></a>
-               <a href="#"><div>사업현황</div></a>
-               <a href="./REsoft-gichan.html"><div>정보마당</div></a>
-            </div>
-         </div>
+         <nav>
+            <ul class="nav-text">
+               <li><a href="./company-introduce.html">회사소개</a></li>
+               <li><a href="./Ecoce.html">사업현황</a></li>
+               <li><a href="./REsoft-gichan.html">정보마당</a></li>
+            </ul>
+         </nav>
          <div class="hamburger-menu"></div>
       </div>
       <div class="hide-nave">
@@ -33,179 +34,187 @@
             <div class="hide-nav-con-wrap">
                <div class="small-size-nav-wrap">
                   <ul class="slide-nav-text">
-                     <a href="./company-introduce.html"><li>회사소개</li></a>
-                     <a href="#"><li>사업현황</li></a>
-                     <a href="./REsoft-gichan.html"><li>정보마당</li></a>
+                     <li><a href="./company-introduce.html">회사소개</a></li>
+                     <li><a href="./Ecoce.html">사업현황</a></li>
+                     <li><a href="./REsoft-gichan.html">정보마당</a></li>
                   </ul>
                </div>
-            <div class="hide-nav-flex-wrap">
-              
-                   <ul class="slide-nav-text-1">
-                      <a href="#"><li>REsoft소개</li></a>
-                      <a href="#"><li>연혁</li></a>
-                      <a href="#"><li>조직도</li></a>
-                      <a href="#"><li>특허&인증</li></a>
-                      <a href="#"><li>오시는 길</li></a>
-                   </ul>
-                   <ul class="slide-nav-text-2">
-                      <a href="#"><li>ECOCE</li></a>
-                      <a href="#"><li>moaDo</li></a>
-                      <a href="#"><li>Etc</li></a>
-                   </ul>
-                   <ul class="slide-nav-text-3">
-                      <a href="./fivepage.html"><li>REsoft소식</li></a>
-                   </ul>
-            </div>
+               <div class="hide-nav-flex-wrap">
+               
+                     <ul class="slide-nav-text-under">
+                        <li><a href="./company-introduce.html#about-us">REsoft소개</a></li>
+                        <li><a href="./company-introduce.html#history">연혁</a></li>
+                        <li><a href="./company-introduce.html#organization">조직도</a></li>
+                        <li><a href="./company-introduce.html#certification">특허&인증</a></li>
+                        <li><a href="./company-introduce.html#directions">오시는 길</a></li>
+                     </ul>
+                     <ul class="slide-nav-text-under">
+                        <li><a href="./Ecoce.html#ecoce-wrap">ECOCE</a></li>
+                        <li><a href="./Ecoce.html#moado">moaDo</a></li>
+                        <li><a href="./Ecoce.html#ETC">Etc</a></li>
+                     </ul>
+                     <ul class="slide-nav-text-under">
+                        <li><a href="./fivepage.html">REsoft소식</a></li>
+                     </ul>
+               </div>
             </div>
          </div>
        </div>
-      </div>
+   </header>
+
 <!--nav 잘 보이기 위한 임시 사진 공간 -->
-   <div class="container-1">
-      <div class="pic-1"></div>
-   </div>
-
-  <!-- project -->
-  <div class="project-wrap">
-   <div class="project-con-wrap">
-      <div class="pro-con-right">
-         <div class="pro-ecoce">
-            <figure class="pro-ecoce-wrap">
-               <div class="ecoce-back-img imghover"></div>
-               <!-- <img src="./img/ecoce-3d-pic.png" alt="에코스3D사진"> -->
-               <figcaption>
-                  <h4>에코스 ECOCE (ECO-Clean Earth)</h4>
-                  <p>국내 최초<br/>
-                     탄소중립 실천인증 플랫폼</p>
-                  <a href="#"></a>   
-               </figcaption>
-            </figure>
-         </div>
-         <div class="pro-moado">
-            <figure class="pro-moado-wrap">
-               <div class="moado-back-img imghover"></div>
-               <figcaption>
-                  <h4>모아두 (moaDo)</h4>
-                  <p>내 손안의 모바일 회원수첩</p>
-                  <a href="#"></a>   
-               </figcaption>
-            </figure>
-         </div>
-      </div>
-      <div class="pro-con-left">
-         <div class="project-text">
-            <h2>프로젝트</h2>
-            <p class="pro-text-eng">RESOFT PROJECT</p>
-            <p class="pro-text-con">첨단 기술 서비스 제공을 위해 사용자 입장에서<br/>
-                생각하고 항상 새로운 도전을 시도합니다.</p>
-         </div>
-         <div class="motion-pic-1">
-            <lottie-player class="ani-player" src="https://assets4.lottiefiles.com/packages/lf20_3rqwsqnj.json"  background="transparent"  speed="1"  style="max-width: 680px; max-height: 680px;"  loop  autoplay></lottie-player>
-         </div>
-     </div>
-   </div>
+<div class="container-1">
+   <div class="pic-1"></div>
 </div>
-
-<!-- service -->
-<div class="service-wrap">
-   <div class="service-con-wrap">
-      <div class="ser-con-left">
-         <div class="service-text">
-            <h2>서비스</h2>
-            <p class="ser-text-eng">SERVICE</p>
-            <p class="ser-text-con">다양한 기술플랫폼을 제공하여 가능성을 열어주고<br/>
-                의미있는 성공으로 인도하는 서비스를 제공합니다.</p>
-         </div>
-         <div class="motion-pic-2">
-            <lottie-player  src="https://assets10.lottiefiles.com/packages/lf20_xl25zrrh.json"  background="transparent"  speed="1"  style="max-width: 680px; max-height: 680px;"  loop  autoplay></lottie-player>
-         </div>
-      </div>
-      <div class="ser-con-right">
-        <div class="ser-app-web-wrap">
-            <div class="ser-app">
-               <figure class="ser-develop-wrap">
-                  <div class="app-develop-img imghover">
-                     <h4>앱(APP) 개발</h4>
-                     <p>ANDROID / IOS</p>
-                  </div>
+   
+   <!-- project -->
+   <div class="project-wrap">
+      <div class="project-con-wrap">
+         <div class="pro-con-right wow fadeInLeft" data-wow-delay="0.35s">
+            <div class="pro-ecoce">
+               <figure class="pro-ecoce-wrap">
+                  <div class="ecoce-back-img imghover"></div>
+                  <!-- <img src="./img/ecoce-3d-pic.png" alt="에코스3D사진"> -->
                   <figcaption>
-                     <p>Android 앱 개발<br/>
-                        iOS 앱 개발<br/>
-                        플랫폼 기획 및 설계</p>
+                     <h4>에코스 ECOCE (ECO-Clean Earth)</h4>
+                     <p>국내 최초<br/>
+                        탄소중립 실천인증 플랫폼</p>
                      <a href="#"></a>   
                   </figcaption>
                </figure>
             </div>
-            <div class="ser-web">
-               <figure class="ser-web-wrap">
-                  <div class="web-back-img imghover">
-                        <h4>웹(WEB) 구축</h4>
-                        <p>RESPONSIVE WEB</p>
-                  </div>
+            <div class="pro-moado">
+               <figure class="pro-moado-wrap">
+                  <div class="moado-back-img imghover"></div>
                   <figcaption>
-                     <p>반응형 홈페이지 구축<br/>
-                        데이터베이스 구축<br/>
-                        빅데이터 구축</p>
+                     <h4>모아두 (moaDo)</h4>
+                     <p>내 손안의 모바일 회원수첩</p>
                      <a href="#"></a>   
                   </figcaption>
                </figure>
+            </div>
+         </div>
+         <div class="pro-con-left wow fadeInRight" data-wow-delay="0.3s">
+            <div class="project-text">
+               <h2>프로젝트</h2>
+               <p class="pro-text-eng">RESOFT PROJECT</p>
+               <p class="pro-text-con">첨단 기술 서비스 제공을 위해 사용자 입장에서<br/>
+                   생각하고 항상 새로운 도전을 시도합니다.</p>
+            </div>
+            <div class="motion-pic-1">
+               <lottie-player class="ani-player" src="https://assets4.lottiefiles.com/packages/lf20_3rqwsqnj.json"  background="transparent"  speed="1"  style="max-width: 680px; max-height: 680px;"  loop  autoplay></lottie-player>
             </div>
         </div>
-         <div class="ser-app-web-wrap">
-            <div class="ser-ai">
-               <figure class="ser-ai-wrap">
-                  <div class="app-ai-img imghover">
-                     <h4>AI 기반 기술개발</h4>
-                     <p>AI BIGDATA</p>
-                  </div>
-                  <figcaption>
-                     <p>AI 대화형 챗봇<br/>
-                        자동 객체인식 검출기<br/>
-                        딥러닝 학습 모델</p>
-                     <a href="#"></a>   
-                  </figcaption>
-               </figure>
+      </div>
+   </div>
+
+   <!-- service -->
+   <div class="service-wrap">
+      <div class="service-con-wrap">
+         <div class="ser-con-left wow fadeInLeft" data-wow-delay="0.3s">
+            <div class="service-text">
+               <h2>서비스</h2>
+               <p class="ser-text-eng">SERVICE</p>
+               <p class="ser-text-con">다양한 기술플랫폼을 제공하여 가능성을 열어주고<br/>
+                   의미있는 성공으로 인도하는 서비스를 제공합니다.</p>
             </div>
-            <div class="ser-xr">
-               <figure class="ser-xr-wrap">
-                  <div class="app-xr-img imghover">
-                     <h4>XR 콘텐츠 구현</h4>
-                     <p>METAVERSE</p>
-                  </div>
-                  <figcaption>
-                     <p>실감형 플랫폼 구축<br/>
-                        가상현실 콘텐츠 제작<br/>
-                        게임콘텐츠 제작</p>
-                     <a href="#"></a>   
-                  </figcaption>
-               </figure>
+            <div class="motion-pic-2">
+               <lottie-player  src="https://assets10.lottiefiles.com/packages/lf20_xl25zrrh.json"  background="transparent"  speed="1"  style="max-width: 680px; max-height: 680px;"  loop  autoplay></lottie-player>
+            </div>
+         </div>
+         <div class="ser-con-right">
+           <div class="ser-app-web-wrap">
+               <div class="ser-app wow fadeInDown" data-wow-delay="0.35s">
+                  <figure class="ser-develop-wrap">
+                     <div class="app-develop-img imghover">
+                        <h4>앱(APP) 개발</h4>
+                        <p>ANDROID / IOS</p>
+                     </div>
+                     <figcaption>
+                        <p>Android 앱 개발<br/>
+                           iOS 앱 개발<br/>
+                           플랫폼 기획 및 설계</p>
+                        <a href="#"></a>   
+                     </figcaption>
+                  </figure>
+               </div>
+               <div class="ser-web wow fadeInDown" data-wow-delay="0.36s">
+                  <figure class="ser-web-wrap">
+                     <div class="web-back-img imghover">
+                           <h4>웹(WEB) 구축</h4>
+                           <p>RESPONSIVE WEB</p>
+                     </div>
+                     <figcaption>
+                        <p>반응형 홈페이지 구축<br/>
+                           데이터베이스 구축<br/>
+                           빅데이터 구축</p>
+                        <a href="#"></a>   
+                     </figcaption>
+                  </figure>
+               </div>
+           </div>
+            <div class="ser-app-web-wrap">
+               <div class="ser-ai wow fadeInDown" data-wow-delay="0.37s">
+                  <figure class="ser-ai-wrap">
+                     <div class="app-ai-img imghover">
+                        <h4>AI 기반 기술개발</h4>
+                        <p>AI BIGDATA</p>
+                     </div>
+                     <figcaption>
+                        <p>AI 대화형 챗봇<br/>
+                           자동 객체인식 검출기<br/>
+                           딥러닝 학습 모델</p>
+                        <a href="#"></a>   
+                     </figcaption>
+                  </figure>
+               </div>
+               <div class="ser-xr wow fadeInDown" data-wow-delay="0.38s">
+                  <figure class="ser-xr-wrap">
+                     <div class="app-xr-img imghover">
+                        <h4>XR 콘텐츠 구현</h4>
+                        <p>METAVERSE</p>
+                     </div>
+                     <figcaption>
+                        <p>실감형 플랫폼 구축<br/>
+                           가상현실 콘텐츠 제작<br/>
+                           게임콘텐츠 제작</p>
+                        <a href="#"></a>   
+                     </figcaption>
+                  </figure>
+               </div>
             </div>
          </div>
       </div>
    </div>
-</div>
-<!-- footer 부분 -->
-<footer>
-   <div class="footer-con-wrap">
-      <div class="footer-ci">
-         <img src="./img/footer/footer-CI.svg" alt="">
-         <p class="footer-copyright">© RESOFT CO.LTD. All Rights Reserved.</p>
-      </div>
-      <div class="footer-text-wrap">
-         <div class="footer-left-con">
-            <p>상호 : (주)리소프트</p> 
-            <p>사업자등록번호 : 722-81-02219</p>    
-            <p>주소 : (41260) 대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호 (신천동 106)</p>
+
+   <!-- footer 부분 -->
+   <footer>
+      <div class="footer-con-wrap">
+         <div class="footer-ci">
+            <img src="./img/footer/footer-CI.svg" alt="">
+            <p class="footer-copyright">© RESOFT CO.LTD. All Rights Reserved.</p>
          </div>
-         <div class="footer-right-con">
-            <p>대표이사 : 오유나&nbsp;&nbsp;개인정보책임자 : 이현지</p> 
-            <p>전화 : (053) 475-2110&nbsp;&nbsp;팩스 : (0504) 257-5966&nbsp;&nbsp;이메일 : call@resoft.kr</p>
+         <div class="footer-text-wrap">
+            <div class="footer-left-con">
+               <p>상호 : (주)리소프트</p> 
+               <p>사업자등록번호 : 722-81-02219</p>    
+               <p>주소 : (41260) 대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호 (신천동 106)</p>
+            </div>
+            <div class="footer-right-con">
+               <p>대표이사 : 오유나&nbsp;&nbsp;개인정보책임자 : 이현지</p> 
+               <p>전화 : (053) 475-2110&nbsp;&nbsp;팩스 : (0504) 257-5966&nbsp;&nbsp;이메일 : call@resoft.kr</p>
+            </div>
          </div>
       </div>
-   </div>
-</footer>
+   </footer>
+
+   <script>
+      new WOW().init();
+   </script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="./js/slider.js"></script>
+   <script src="./js/index.js"></script>
+   <script src="./js/header.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="./js/slider.js"></script>
-<script src="./js/index.js"></script>
+
 </html>
