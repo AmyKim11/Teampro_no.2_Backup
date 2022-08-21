@@ -9,6 +9,8 @@
    <link rel="stylesheet" href="./css/style.css">
    <link rel="stylesheet" href="./css/resoft_page.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+   
    <link rel="stylesheet" href="./css/animate.css">
    <script src="./js/wow.min.js"></script>
    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -62,10 +64,105 @@
        </div>
    </header>
 
-<!--nav 잘 보이기 위한 임시 사진 공간 -->
-<div class="container-1">
-   <div class="pic-1"></div>
-</div>
+   <!-- slider -->
+   <div class="slider">
+      <div id="slider_item" class="carousel slide" data-ride="carousel">
+         <div class="carousel_inner">
+           <div class="carousel-item active">
+             <img class="slider_img" src="./img//slider//slider_1.png" alt="First slide">
+           </div>
+           <div class="carousel-item">
+             <img class="slider_img" src="./img//slider//slider_2.png" alt="Second slide">
+           </div>
+           <div class="carousel-item">
+             <img class="slider_img" src="./img//slider//slider_3.png" alt="Third slide">
+           </div>
+         </div>
+      </div>
+
+      <div class="slider_para_wrap">
+         <div class="slider_para">
+            <h1 class="para_first">Evolution<br>With New Software</h1>
+            <br>
+            <p class="para_second">
+               <span>Mobile APP(Android/iOS) Development, AI Bigdata Analysis, MetaVerse, Responsive WEBsite, Brand Design Launch, ICT Consulting</span>
+            </p>
+         </div>
+      </div>
+
+      <div class="slider_button_wrap">
+         <div class="slider_button">
+            <a class="preview_button control_button_style" href="#slider_item" role="button" data-slide="prev">
+               <img src="./img/slider/preview_button.svg" alt="">
+            </a>
+            <button class="pauseplay_button btn btn-link" type="button" data-target="#slider_item">
+               <img class="pauseplay_img" src="./img/slider/pause.svg" alt="">
+            </button>
+            <a class="next_button control_button_style" href="#slider_item" role="button" data-slide="next">
+               <img src="./img/slider/next_button.svg" alt="">
+            </a>
+         </div>
+      </div>
+       
+   </div>
+
+   <!-- resoft news part -->
+   <div class="news_wrap">
+      <div class="news_content_wrap">
+         <div class="news_title">
+            <h1>리소프트의 새로운 소식</h1>
+            <p>RESOFT NEWS</p>
+         </div>
+   
+         <ul class="news_item">
+               <li class="news_item_list">
+                  <a class="news_item_link" href="./fivepage.html">
+                     <div class="item_img_wrap">
+                        <img class="item_img" src="./img/resoft_news/square_36.png" alt="...">
+                     </div>
+                     <p class="item_para"><span>Lorem ipsum dolor sit amet, consetetur sadipscing elit...</span></p>
+                     <p class="item_date">2022.01.01</p>
+                  </a>
+               </li>
+
+               <div id="item_seperator"></div>
+
+               <li class="news_item_list">
+                  <a class="news_item_link" href="./fivepage.html">
+                     <div class="item_img_wrap">
+                        <img class="item_img" src="./img/resoft_news/square_36.png" alt="...">
+                     </div>
+                     <p class="item_para"><span>Lorem ipsum dolor sit amet, consetetur sadipscing elit...</span></p>
+                     <p class="item_date">2022.01.01</p>
+                  </a>
+               </li>
+               
+               <div id="item_seperator"></div>
+
+               <li class="news_item_list">
+                  <a class="news_item_link" href="./fivepage.html">
+                     <div class="item_img_wrap">
+                        <img class="item_img" src="./img/resoft_news/square_36.png" alt="...">
+                     </div>
+                     <p class="item_para"><span>Lorem ipsum dolor sit amet, consetetur sadipscing elit...</span></p>
+                     <p class="item_date">2022.01.01</p>
+                  </a>
+               </li>
+
+               <div id="item_seperator"></div>
+
+               <li class="news_item_list">
+                  <a class="news_item_link" href="./fivepage.html">
+                     <div class="item_img_wrap">
+                        <img class="item_img" src="./img/resoft_news/square_36.png" alt="...">
+                     </div>
+                     <p class="item_para"><span>Lorem ipsum dolor sit amet, consetetur sadipscing elit...</span></p>
+                     <p class="item_date">2022.01.01</p>
+                  </a>
+               </li>
+         </ul>
+      </div>
+   </div>
    
    <!-- project -->
    <div class="project-wrap">
@@ -183,6 +280,140 @@
                   </figure>
                </div>
             </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- reference -->
+   <div class="refer_wrap">
+      <div class="refer_content_wrap">
+         <div class="refer_title_wrap">
+            <h1 class="refer_title">레퍼런스</h1>
+            <p class="refer_para">REFERENCE</p>
+         </div>
+         
+         <div class="refer_img_wrap">
+            <ul class="refer_list">
+               <li class="refer_img_list">
+                  <img id="refer_img_1" src="./img/reference/01_KIRA.png" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_2" src="./img/reference/02_colorfulDaegu.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_3" src="./img/reference/03_everydayNews.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_4" src="./img/reference/04_KNU.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_5" src="./img/reference/05_DaeguMBC.png" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_6" src="./img/reference/06_DaeguSportsCouncil.png" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_7" src="./img/reference/07_DaeguCatholicUniver.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_8" src="./img/reference/08_SongpaGu.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_9" src="./img/reference/09_PeoplePower.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_10" src="./img/reference/10_LionsClubsInternational.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_11" src="./img/reference/11_KECA.png" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_12" src="./img/reference/12_bareumi.png" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_13" src="./img/reference/13_OceanUniversity.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_14" src="./img/reference/14_DCCI.png" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_15" src="./img/reference/15_CAK.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_16" src="./img/reference/16_JCI.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_17" src="./img/reference/17_KMU.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_18" src="./img/reference/18_MMU.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_19" src="./img/reference/19_TKTechHS.png" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_20" src="./img/reference/20_DGICT.png" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_21" src="./img/reference/21_KMCCA.png" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_22" src="./img/reference/22_Kibwa.png" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_23" src="./img/reference/23_K-SCA.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_24" src="./img/reference/24_TTQ.png" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_25" src="./img/reference/25_Dalseo.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_26" src="./img/reference/26_DIP.png" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_27" src="./img/reference/27_Rotary.png" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_28" src="./img/reference/28_Suseong.svg" alt="">
+               </li>
+               
+               <li class="refer_img_list">
+                  <img id="refer_img_29" src="./img/reference/29_TBN.svg" alt="">
+               </li>
+   
+               <li id="refer_empty">
+   
+               </li>
+            </ul>
          </div>
       </div>
    </div>

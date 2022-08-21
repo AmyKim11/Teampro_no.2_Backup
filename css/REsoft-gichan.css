@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
 *{
    box-sizing: border-box;
    margin: 0;
@@ -83,8 +82,8 @@ header{
 .nav-text li:hover{
    color: #184B9F;
 }
-.nav-text a:first-of-type li:after,  /*<- 두번째, 세번째, 네번째 서브 해당되는 사람이면 살려야함*/
-.nav-text a:nth-of-type(2) li:after /*<- 첫번째, 세번째, 마지막 서브해당되는 사람이면 살려야 함*/
+.nav-text a:first-of-type li:after, /*<- 두번째, 세번째, 네번째 서브 해당되는 사람이면 살려야함*/
+.nav-text a:nth-of-type(2) li:after/*<- 첫번째, 세번째, 마지막 서브해당되는 사람이면 살려야 함*/
 { /*<- 첫번째, 두번째 해당되는 서브만 살림*/
    display:block;
    margin-top: 3px;
@@ -105,6 +104,7 @@ header{
 
 
 
+
 .nav-text .underline{
    margin-top: 3px;
    width: 74px;
@@ -119,6 +119,10 @@ header{
 .nav-text .under-2{
    display: none; /*<-두번째 서브 페이지는 주석처리 하고, 나머지 1이랑3은 살림*/
 }
+/* .nav-text .under-3{
+   display: none;/*<-세번째,네번째(마지막) 서브 페이지는 주석처리 함 위의
+   under-1,2는 살려야 함
+} */
 
 
 
@@ -145,6 +149,7 @@ header{
    left: 0px; */
    width: 100%;
    height: 263px;
+   display: none;
 }
 
 .hide-nav-texts{
@@ -213,35 +218,64 @@ header{
 }
 
 
+
 /***************nav**************/
-
-
-.head-wrap img{
-   margin-top: 80px;
-    width: 1920px;
+.head-wrap {
+    position: relative;
+    width: 100%;
+    height: 300px;
+   z-index: 80;
 }
+.head-wrap-img{
+    background-image: url("/Teampro_No.2/img/headwarp.png");
+    width: 100%;
+    height: 300px;
 
-.head-wrap p {
-   position: absolute;
-   top: 201px;
+}
+.head-wrap p{
+    padding: 5px 10px;
+	color: white;
+    font-size:40px;
+    font-weight: 500;
+	text-align: center;
+	position: absolute;
+	top: 63%;
+	left: 50%;
+	transform: translate( -50%, -50% );
+
+}
+/*
+.nav p {
+  display: block;
+  z-index: 9999;
+  margin: 0 auto;
    left: 886px;
    width: 148px;
    height: 58px;
    font-weight: 500;
-   color:white;
+   color: red;
+   background-color: red;
    font-size:40px;
 }
 
 
 /*****************content /REsoft 소식/  *************/
+
+.Main{
+   margin-top: 100px;
+}
 .content-text{
-    position: absolute;
-    top: 480px;
-    left: 240px;
-    width: 211px;
+    /* position: absolute;
+    top: 430px;
+    left: 50% ;
+    margin-left: -710px; */
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
     height: 58px;
     text-align: left;
     letter-spacing: 0;
+   
 }
 
 .content-text p:nth-child(1){
@@ -260,35 +294,39 @@ header{
 /*******         REsoft소식 밑 이미지*******/
 
 .content {
-    position: relative;
-    top: 280px;
-    left: 240px;
-    width: 1440px;
+    /* position: relative;
+    top: 280px; */
+    width: 100%;
+    max-width: 1440px;
     height: 100%;
     display: flex;
-   
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
 
-.content-2 {
+/* .content-2 {
    position: relative;
    top: 280px;
    left: 240px;
-   width: 1440px;
+   width: 100%;
+   max-width: 1440px;
    height: 100%;
    display: flex;
   
-}
+  
+} */
 
 /****** 메인 이미지+텍스트 크기 **********/
 .content-main{ 
-   display:flex;
-   flex-wrap: wrap;
-   width: 680px;
+   position: relative;
+   /* display:flex;
+   flex-wrap: wrap; */
+   max-width: 680px;
+   width: 100%;
    height: 430px;
-   margin-right:80px;
+   /* margin-right:80px; */
    margin-bottom: 110px;
-
 }
 
 
@@ -297,7 +335,8 @@ header{
 /** 이미지 + 글 한구역당 크기**/
 
 .content-main-1{
-   width:680px;
+   max-width:fit-content;
+   width: 100%;
    height: 360px;
    border: 1px solid #707070;
    border-radius: 20px;
@@ -305,14 +344,18 @@ header{
 
 }
 
+
+
 /** text **/
 .content-main-text{
    position: absolute;
-   top: 375px;
-   width: 680px;
+   /* top: 375px; */
+   max-width: 680px;
+   width: 100%;
    height: 58px;
    text-align: left;
    letter-spacing: 0;
+   z-index: 1;
 }
 
 .content-main-text p:nth-child(1){
@@ -330,7 +373,8 @@ header{
 
 
 .content-main .img1{
-   width: 680px;
+   max-width: 680px;
+   width: 100%;
    height: 360px;
    transition: 0.4s ease-in-out;
 }
@@ -345,124 +389,6 @@ header{
    color:#184B9F;
    cursor: pointer;
 }
-/*
- /*#button{
-   position: relative;
-   width: 200px;
-   height: 73px;
-   line-height: 73px; 
-   text-align: center;
-   top: 200px;
-   left: 860px;
-   border: 1px solid black;
-   border-radius: 43px;
-   background-color: #FFFFFF;
-   transition: 1s;  
-   overflow: hidden;
-   font-weight: 500;
-}
-
-#btn1 :hover{ 
-   color: #FFFFFF;
-   background-color: #184B9F;
-   transition: 1s; 
-   cursor: pointer;
-}
-
-.content-more{
-   width:680px;
-   height: 417px;
-}
-/*
-.more-img{
-   width: 680px;
-   height: 360px;
-   position: relative;
-   top: 280px;
-   left: 240px;
-   margin-right:80px;
-   margin-bottom: 110px;
-}
-
-
-
-   more 한구역  
-.more{
-   position: relative;
-   width: 1560px;
-    height: 100%;
-   left: 240px;
-   top: 280px;
-    display: flex;
-   flex-wrap: wrap;
-   overflow: hidden;
-   background-color: red;
-}
-.more-content{
-   width: 680px;
-   height: 100%;
-   margin-bottom: 200px;
-   margin-right:80px;
-   overflow: hidden;
-}
-
-
-
-
-이미지
- .b { 
-   display: none;
-   width:680px;
-   height: 360px;
-   border: 1px solid #707070;
-   border-radius: 20px;
-   overflow: hidden;
-  
- }
-
-
- .b .more-img{
-   height: 360px;
-   width: 680px;
-   transition: 0.4s ease-in-out;
- }
-
-
- .more-txt{
-   text-align: left;
-   letter-spacing: 0;
-   position: absolute;
- } 
-
- .more-txt-1{
-   color:black;
-   font-size: 20px;
-   font-weight: 700;
-   padding-top:6px;
- }
-
- .more-txt-2{
-   color:#c8c8c8;
-   font-size: 16px;
-   font-weight: 500;
- }
- 
-/* 버튼 
- .a {
-   position: relative;
-   left: 860px;
-   width: 200px;
-   height: 73px;
-   line-height: 73px; 
-   text-align: center;
-   border: 1px solid black;
-   border-radius: 43px;
-   background-color: #FFFFFF;
-   transition: 1s;  
-   font-weight: 500;
- }
-
- */
 
 
  /********** more hover *************/
@@ -482,13 +408,14 @@ header{
     display: none;
     width: 100%; 
     height: 100%; 
-    left: 200px;
+    /* left: 200px; */
     }
 
 .a{
       position: relative;
-      top:300px;
-      left: 860px;
+      top: 100px;
+      left: 50%;
+      margin-left:-110px;
       width: 200px;
       height: 73px;
       line-height: 73px; 
@@ -514,7 +441,7 @@ header{
 
 footer{
    position: relative; 
-   top: 400px;
+   top: 250px;
    left: 0;
    width: 100%;
    height: 250px;
@@ -572,7 +499,7 @@ footer{
 
 /* 반응형 - 해상도 (941px~1024이하일때) */
 
-@media screen and (min-width:941px) and (max-width:1280px) {
+@media screen and (min-width:769px) and (max-width:1280px) {
    /* nav 부분 */
    .header-con-wrap{
       max-width: 1024px;
@@ -584,7 +511,7 @@ footer{
   
    /* footer */
    footer{
-      top: 5643px;
+      top: 500px;
    }
 
 }
